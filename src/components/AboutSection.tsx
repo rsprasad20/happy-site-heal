@@ -90,9 +90,9 @@ const AboutSection = () => {
               <Heart className="w-8 h-8 text-primary mb-4" />
               <h4 className="font-semibold text-foreground mb-2">Conservation Impact</h4>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• NYAS Mentor for 1000 Girls Program</li>
-                <li>• CCC Fellow at Colorado State</li>
-                <li>• ATBC Keynote Speaker, Rwanda</li>
+                <li>• Cohort 12 - Center for Collaborative Conservation (CCC) Fellow at Colorado State University</li>
+                <li>• Gentry Award Winner for Best Poster presentation at the 60th Annual Meeting of the Association for Tropical Biology Conference (ATBC) in Kigali, Rwanda</li>
+                <li>• The New York Academy of Sciences - 1000 Girls, 1000 Future's Mentor</li>
               </ul>
             </CardContent>
           </Card>
