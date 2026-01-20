@@ -64,7 +64,7 @@ const AboutSection = () => {
           <Card className="bg-card/50 border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6">
               <Award className="w-8 h-8 text-primary mb-4" />
-              <h4 className="font-semibold text-foreground mb-2">Research Excellence</h4>
+              <h4 className="font-semibold text-foreground mb-2">Research Publications</h4>
               <p className="text-sm text-muted-foreground">5+ peer-reviewed publications in conservation biology</p>
               <a 
                 href="https://www.nature.com/articles/s41598-025-14867-3" 
