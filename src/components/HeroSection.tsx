@@ -101,24 +101,24 @@ const HeroSection = () => {
             {/* Glowing orb background */}
             <div className="absolute w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-radial from-primary/20 via-primary/5 to-transparent blur-2xl" />
 
-            {/* Portrait */}
+            {/* Portrait with floating stats */}
             <div className="relative z-10">
               <img 
                 src={simranPortrait} 
                 alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
                 className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full object-cover border-4 border-primary/30"
               />
-            </div>
+              
+              {/* Floating Stats - positioned relative to image */}
+              <div className="absolute top-4 -left-20 md:top-8 md:-left-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
+                <p className="text-2xl font-bold text-accent">500+</p>
+                <p className="text-xs text-muted-foreground">Research Field Interviews</p>
+              </div>
 
-            {/* Floating Stats */}
-            <div className="absolute top-8 -left-12 md:top-12 md:-left-16 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
-              <p className="text-2xl font-bold text-accent">500+</p>
-              <p className="text-xs text-muted-foreground">Research Field Interviews</p>
-            </div>
-
-            <div className="absolute bottom-8 -right-12 md:bottom-12 md:-right-16 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
-              <p className="text-2xl font-bold text-accent">3+ Indian States</p>
-              <p className="text-xs text-muted-foreground">Study site across the western ghats</p>
+              <div className="absolute bottom-4 -right-20 md:bottom-8 md:-right-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
+                <p className="text-2xl font-bold text-accent">3+ Indian States</p>
+                <p className="text-xs text-muted-foreground">Study site across the western ghats</p>
+              </div>
             </div>
           </div>
         </div>
