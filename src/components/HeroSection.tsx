@@ -40,7 +40,7 @@ const HeroSection = () => {
             <div className="inline-flex items-center gap-4 p-4 rounded-xl border border-border bg-card/50">
               <div>
                 <p className="text-2xl font-bold text-accent">4+ Years</p>
-                <p className="text-sm text-muted-foreground">Working on the magnificent Asian elephant (Elephas maximus) in South India</p>
+                <p className="text-sm text-muted-foreground">Working on the magnificent Asian elephant <em>(Elephas maximus)</em> in South India</p>
               </div>
             </div>
 
