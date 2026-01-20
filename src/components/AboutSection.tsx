@@ -37,15 +37,14 @@ const AboutSection = () => {
           {/* Right - Skills */}
           <div className="space-y-8">
             <h3 className="text-xl font-semibold text-foreground">Expertise & Skills</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
-                <Badge 
+                <span 
                   key={skill} 
-                  variant="outline" 
-                  className="px-4 py-2 border-primary/30 text-primary hover:bg-primary/10 transition-colors"
+                  className="px-5 py-2.5 rounded-full border border-primary/40 bg-transparent text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
                 >
                   {skill}
-                </Badge>
+                </span>
               ))}
             </div>
           </div>
