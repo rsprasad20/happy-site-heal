@@ -37,11 +37,12 @@ const AboutSection = () => {
           {/* Right - Skills */}
           <div className="space-y-8">
             <h3 className="text-xl font-semibold text-foreground">Expertise & Skills</h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span 
                   key={skill} 
-                  className="px-5 py-2.5 rounded-full border border-primary/40 bg-transparent text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
+                  className="px-3 py-1.5 rounded-full border border-primary/40 bg-transparent text-primary text-xs font-medium hover:bg-primary/10 transition-colors"
+                  style={{ fontFamily: 'Arial, sans-serif' }}
                 >
                   {skill}
                 </span>
