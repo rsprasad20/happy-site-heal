@@ -16,7 +16,7 @@ const AboutSection = () => {
       
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-          <span className="text-primary">About</span>
+          <span className="text-primary">About</span>{" "}
           <span className="text-foreground">Simran</span>
         </h2>
 
