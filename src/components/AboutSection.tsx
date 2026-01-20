@@ -41,8 +41,8 @@ const AboutSection = () => {
               {skills.map((skill) => (
                 <span 
                   key={skill} 
-                  className="px-4 py-2 rounded-full border border-primary bg-transparent text-primary text-sm tracking-wide hover:bg-primary/10 transition-colors"
-                  style={{ fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 500 }}
+                  className="px-5 py-2.5 rounded-full border border-primary bg-transparent text-primary hover:bg-primary/10 transition-colors"
+                  style={{ fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 600, fontSize: '15px' }}
                 >
                   {skill}
                 </span>
