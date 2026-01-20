@@ -6,7 +6,7 @@ const skills = [
   "Wildlife Conservation", "Data Science", "Field Biology",
   "Python", "R", "Machine Learning", "Statistical Analysis",
   "Manuscript Writing and Preparation", "Grant Writing", "Photography", "Storytelling",
-  "QGIS Maps", "Science Publications"
+  "QGIS Maps", "Science Publications", "PADI Nitrox Scuba Diver"
 ];
 
 const AboutSection = () => {
