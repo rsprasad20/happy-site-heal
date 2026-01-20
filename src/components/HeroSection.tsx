@@ -33,7 +33,7 @@ const HeroSection = () => {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Bridging nature, science, and data to conserve the wild. Passionate about using AI and technology to understand and protect our planet's most vulnerable ecosystems.
+              Bridging conservation science, data analysis, and social science methods to understand human–wildlife dynamics and conserve species. Passionate about applying interdisciplinary, evidence-based approaches to uncover ecological processes and protect vulnerable ecosystems.
             </p>
 
             {/* Stats Card */}
