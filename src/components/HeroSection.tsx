@@ -111,12 +111,12 @@ const HeroSection = () => {
             </div>
 
             {/* Floating Stats */}
-            <div className="absolute top-4 left-0 md:top-8 md:left-0 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
+            <div className="absolute top-8 -left-12 md:top-12 md:-left-16 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
               <p className="text-2xl font-bold text-accent">500+</p>
               <p className="text-xs text-muted-foreground">Research Field Interviews</p>
             </div>
 
-            <div className="absolute bottom-4 right-0 md:bottom-8 md:right-0 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
+            <div className="absolute bottom-8 -right-12 md:bottom-12 md:-right-16 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
               <p className="text-2xl font-bold text-accent">3+ Indian States</p>
               <p className="text-xs text-muted-foreground">Study site across the western ghats</p>
             </div>
