@@ -39,8 +39,8 @@ const HeroSection = () => {
             {/* Stats Card */}
             <div className="inline-flex items-center gap-4 p-4 rounded-xl border border-border bg-card/50">
               <div>
-                <p className="text-2xl font-bold text-accent">5+ Years</p>
-                <p className="text-sm text-muted-foreground">Watching the magnificent "Elephas Maximus" in India</p>
+                <p className="text-2xl font-bold text-accent">4+ Years</p>
+                <p className="text-sm text-muted-foreground">Working on the magnificent Asian elephant (Elephas maximus) in South India</p>
               </div>
             </div>
 
