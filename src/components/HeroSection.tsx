@@ -97,11 +97,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Image with decorative elements */}
-          <div className="relative flex justify-center lg:justify-end">
-            {/* Decorative circle */}
-            <div className="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-full border border-primary/20" />
-            <div className="absolute w-[420px] h-[420px] md:w-[520px] md:h-[520px] rounded-full border border-primary/10" />
-            
+          <div className="relative flex justify-center lg:justify-end -mt-8">
             {/* Glowing orb background */}
             <div className="absolute w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-radial from-primary/20 via-primary/5 to-transparent blur-2xl" />
 
