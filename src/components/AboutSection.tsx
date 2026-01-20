@@ -67,7 +67,7 @@ const AboutSection = () => {
               <h4 className="font-semibold text-foreground mb-2">Research Publications</h4>
               <p className="text-sm text-muted-foreground">5+ peer-reviewed publications in conservation biology</p>
               <a 
-                href="https://www.nature.com/articles/s41598-025-14867-3" 
+                href="https://scholar.google.com/citations?user=q4DHZSoAAAAJ&hl=en&authuser=1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-sm text-primary hover:underline mt-2 inline-block"
