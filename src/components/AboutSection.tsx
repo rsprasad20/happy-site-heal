@@ -5,7 +5,7 @@ import { GraduationCap, Award, Lightbulb, Heart } from "lucide-react";
 const skills = [
   "Wildlife Conservation", "Data Science", "Field Biology",
   "Python", "R", "Machine Learning", "Statistical Analysis",
-  "Research Writing", "Grant Writing", "Photography", "Storytelling",
+  "Manuscript Writing and Preparation", "Grant Writing", "Photography", "Storytelling",
   "QGIS Maps", "Science Publications"
 ];
 
