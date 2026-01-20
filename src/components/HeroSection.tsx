@@ -13,10 +13,13 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8 z-10">
             {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5">
+            <a 
+              href="mailto:simranprasaduae@gmail.com"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer"
+            >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm text-primary">Available for Collaboration</span>
-            </div>
+            </a>
 
             {/* Name */}
             <div>
