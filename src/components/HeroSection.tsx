@@ -1,0 +1,137 @@
+import { ArrowDown, Linkedin, Mail, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import simranPortrait from "@/assets/simran-portrait.png";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background glow effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,hsl(158_65%_45%/0.08)_0%,transparent_60%)]" />
+      
+      <div className="container mx-auto px-6 lg:px-12 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8 z-10">
+            {/* Availability Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm text-primary">Available for Collaboration</span>
+            </div>
+
+            {/* Name */}
+            <div>
+              <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight">
+                Dr. Simran
+                <span className="block text-primary">Prasad</span>
+              </h1>
+            </div>
+
+            {/* Title */}
+            <p className="text-xl md:text-2xl text-primary font-medium">
+              PhD in Wildlife Ecology & Conservation | Researcher | Storyteller
+            </p>
+
+            {/* Description */}
+            <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+              Bridging nature, science, and data to conserve the wild. Passionate about using AI and technology to understand and protect our planet's most vulnerable ecosystems.
+            </p>
+
+            {/* Stats Card */}
+            <div className="inline-flex items-center gap-4 p-4 rounded-xl border border-border bg-card/50">
+              <div>
+                <p className="text-2xl font-bold text-accent">5+ Years</p>
+                <p className="text-sm text-muted-foreground">Watching the magnificent "Elephas Maximus" in India</p>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                size="lg" 
+                className="bg-primary/10 text-primary hover:bg-primary/20 border border-primary/30"
+                onClick={() => document.getElementById('wildlife')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explore My Work
+                <ArrowDown className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-primary/30 text-primary hover:bg-primary/10"
+                asChild
+              >
+                <a href="https://www.nature.com/articles/s41598-025-14867-3" target="_blank" rel="noopener noreferrer">
+                  Read My Research
+                </a>
+              </Button>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-3 pt-4">
+              <a 
+                href="https://www.linkedin.com/in/simran-prasad-2785b011b/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-colors"
+              >
+                <Linkedin className="w-5 h-5 text-primary" />
+              </a>
+              <a 
+                href="mailto:simranprasaduae@gmail.com"
+                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-colors"
+              >
+                <Mail className="w-5 h-5 text-primary" />
+              </a>
+              <a 
+                href="https://www.instagram.com/simran__prasad/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-colors"
+              >
+                <Instagram className="w-5 h-5 text-primary" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Content - Image with decorative elements */}
+          <div className="relative flex justify-center lg:justify-end">
+            {/* Decorative circle */}
+            <div className="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-full border border-primary/20" />
+            <div className="absolute w-[420px] h-[420px] md:w-[520px] md:h-[520px] rounded-full border border-primary/10" />
+            
+            {/* Glowing orb background */}
+            <div className="absolute w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-radial from-primary/20 via-primary/5 to-transparent blur-2xl" />
+
+            {/* Portrait */}
+            <div className="relative z-10">
+              <img 
+                src={simranPortrait} 
+                alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
+                className="w-[300px] md:w-[400px] h-auto object-cover"
+              />
+            </div>
+
+            {/* Floating Stats */}
+            <div className="absolute top-10 right-0 md:right-10 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm">
+              <p className="text-2xl font-bold text-accent">500+</p>
+              <p className="text-xs text-muted-foreground">Research Field Interviews</p>
+            </div>
+
+            <div className="absolute bottom-20 right-0 md:right-5 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm">
+              <p className="text-2xl font-bold text-accent">3+ Indian States</p>
+              <p className="text-xs text-muted-foreground">Study site across the western ghats</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
+          <span className="text-sm">Scroll to explore</span>
+          <ArrowDown className="w-4 h-4 animate-bounce" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

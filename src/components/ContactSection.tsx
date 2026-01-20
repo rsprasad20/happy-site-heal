@@ -1,0 +1,199 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import { Linkedin, Mail, Instagram, Youtube, Users, Mic, Pen, GraduationCap, MapPin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const collaborationTypes = [
+  {
+    icon: Users,
+    title: "Research Collaboration",
+    description: "Joint research projects in wildlife conservation and AI applications"
+  },
+  {
+    icon: Mic,
+    title: "Speaking Engagements",
+    description: "Conferences, workshops, and academic presentations"
+  },
+  {
+    icon: Pen,
+    title: "Writing & Media",
+    description: "Science communication, articles, and interviews"
+  },
+  {
+    icon: GraduationCap,
+    title: "Mentorship",
+    description: "Guiding students and early-career conservationists"
+  }
+];
+
+const socialLinks = [
+  {
+    icon: Linkedin,
+    name: "LinkedIn",
+    description: "Professional networking",
+    href: "https://www.linkedin.com/in/simran-prasad-2785b011b/"
+  },
+  {
+    icon: Mail,
+    name: "Email",
+    description: "Direct correspondence",
+    href: "mailto:simranprasaduae@gmail.com"
+  },
+  {
+    icon: Instagram,
+    name: "Instagram",
+    description: "Creative & lifestyle updates",
+    href: "https://www.instagram.com/simran__prasad/"
+  },
+  {
+    icon: Youtube,
+    name: "YouTube",
+    description: "Short videos & talks",
+    href: "https://www.youtube.com/shorts/VzKPbVYGNu8"
+  }
+];
+
+const ContactSection = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you within 48 hours.",
+    });
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
+
+  return (
+    <section id="contact" className="py-24 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,hsl(158_65%_45%/0.05)_0%,transparent_50%)]" />
+      
+      <div className="container mx-auto px-6 lg:px-12">
+        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          <span className="text-foreground">Let's</span>
+          <span className="text-primary">Collaborate</span>
+        </h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+          Whether you're interested in research collaboration, speaking engagements, or simply want to discuss wildlife conservation, I'd love to hear from you.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                placeholder="Name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="bg-card/50 border-border focus:border-primary"
+                required
+              />
+              <Input
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="bg-card/50 border-border focus:border-primary"
+                required
+              />
+              <Input
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                className="bg-card/50 border-border focus:border-primary"
+                required
+              />
+              <Textarea
+                placeholder="Message"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="bg-card/50 border-border focus:border-primary min-h-[150px]"
+                required
+              />
+              <div className="flex gap-4">
+                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Send Message
+                </Button>
+                <Button type="button" variant="outline" className="border-primary/30 text-primary hover:bg-primary/10">
+                  Schedule Call
+                </Button>
+              </div>
+            </form>
+            <p className="text-sm text-muted-foreground mt-4">
+              I'll get back to you within 48 hours. For urgent matters, please reach out via LinkedIn.
+            </p>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Get In Touch</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary/50 bg-card/30 transition-colors group"
+                  >
+                    <link.icon className="w-5 h-5 text-primary" />
+                    <div>
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">{link.name}</p>
+                      <p className="text-xs text-muted-foreground">{link.description}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Collaboration Opportunities</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {collaborationTypes.map((type) => (
+                  <Card key={type.title} className="bg-card/30 border-border">
+                    <CardContent className="p-4 flex items-start gap-3">
+                      <type.icon className="w-5 h-5 text-primary mt-0.5" />
+                      <div>
+                        <p className="font-medium text-foreground">{type.title}</p>
+                        <p className="text-xs text-muted-foreground">{type.description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Status */}
+            <div className="p-6 rounded-xl border border-primary/30 bg-primary/5">
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="w-4 h-4 text-primary" />
+                <h4 className="font-semibold text-foreground">Current Status</h4>
+              </div>
+              <p className="text-muted-foreground text-sm mb-2">
+                Based in Dubai, United Arab Emirates, open to global collaboration
+              </p>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-sm text-primary">Accepting Research Partnerships</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;

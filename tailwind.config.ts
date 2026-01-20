@@ -57,6 +57,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        gold: {
+          DEFAULT: "hsl(45, 90%, 55%)",
+          light: "hsl(45, 90%, 65%)",
+          dark: "hsl(45, 90%, 45%)",
+        },
+        forest: {
+          DEFAULT: "hsl(158, 65%, 45%)",
+          light: "hsl(158, 65%, 55%)",
+          dark: "hsl(158, 65%, 35%)",
+        },
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

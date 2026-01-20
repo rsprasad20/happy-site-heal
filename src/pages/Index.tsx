@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import WildlifeSection from "@/components/WildlifeSection";
+import BookClubSection from "@/components/BookClubSection";
+import CreativeSection from "@/components/CreativeSection";
+import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <WildlifeSection />
+      <BookClubSection />
+      <CreativeSection />
+      <BlogSection />
+      <ContactSection />
+      
+      {/* Footer */}
+      <footer className="py-8 border-t border-border">
+        <div className="container mx-auto px-6 lg:px-12 text-center text-sm text-muted-foreground">
+          <p>© 2024 Dr. Simran Prasad. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
