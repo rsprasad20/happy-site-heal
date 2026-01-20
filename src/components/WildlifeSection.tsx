@@ -1,0 +1,152 @@
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import wildlifeWork from "@/assets/wildlife-work.jpg";
+
+const projects = [
+  {
+    title: "Tiger Habitat Mapping with AI",
+    location: "Ranthambore National Park",
+    year: "2023-2024",
+    status: "Ongoing",
+    featured: true,
+    description: "Developed machine learning models to predict optimal tiger habitat corridors, resulting in 23% improvement in conservation area designation.",
+    impact: "150+ tigers",
+    tags: ["AI/ML", "GIS", "Conservation"]
+  },
+  {
+    title: "Elephant Migration Patterns",
+    location: "Western Ghats",
+    year: "2022-2023",
+    status: "Published",
+    description: "Used GPS collars and predictive analytics to map elephant migration routes, reducing human-wildlife conflict by 40%.",
+    impact: "800+ elephants",
+    tags: ["Data Analysis", "Tracking", "Conflict Resolution"]
+  },
+  {
+    title: "Bird Species Recovery Program",
+    location: "Bharatpur Bird Sanctuary",
+    year: "2021-2022",
+    status: "Completed",
+    description: "Implemented AI-powered monitoring system for endangered migratory birds, improving population tracking accuracy.",
+    impact: "50+ species",
+    tags: ["Monitoring", "AI", "Biodiversity"]
+  },
+  {
+    title: "Marine Ecosystem Health Assessment",
+    location: "Andaman Islands",
+    year: "2023",
+    status: "In Review",
+    description: "Conducted comprehensive health assessment of coral reef ecosystems using underwater drones and data analysis.",
+    impact: "12 reef sites",
+    tags: ["Marine Biology", "Drones", "Ecosystem Health"]
+  }
+];
+
+const timeline = [
+  { year: "2025", title: "Post Doctoral Researcher - Centre for Wildlife Studies" },
+  { year: "2020", title: "Doctoral Researcher - Centre for Wildlife Studies" },
+  { year: "2019", title: "Master of Science Ecology, Evolution & Conservation - Imperial College of London" },
+  { year: "2016", title: "Bachelor of Science Zoology with Marine Zoology - Bangor University" },
+];
+
+const stats = [
+  { value: "15+", label: "Active Projects" },
+  { value: "200+", label: "Species Studied" },
+  { value: "8", label: "Publications" },
+  { value: "5", label: "Conservation Awards" },
+];
+
+const WildlifeSection = () => {
+  return (
+    <section id="wildlife" className="py-24 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,hsl(158_65%_45%/0.05)_0%,transparent_50%)]" />
+      
+      <div className="container mx-auto px-6 lg:px-12">
+        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          <span className="text-primary">Wildlife</span>
+          <span className="text-foreground">Conservation</span>
+        </h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+          Exploring the intersection of technology and nature to create innovative solutions for wildlife conservation challenges across diverse ecosystems.
+        </p>
+
+        {/* Fieldwork Image */}
+        <div className="relative rounded-2xl overflow-hidden mb-16 group">
+          <img 
+            src={wildlifeWork} 
+            alt="Wildlife conservation fieldwork"
+            className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+          <div className="absolute bottom-8 left-8">
+            <h3 className="text-2xl font-serif font-bold text-foreground">Fieldwork in Action</h3>
+            <p className="text-muted-foreground">Documenting wildlife behavior in their natural habitat</p>
+          </div>
+        </div>
+
+        {/* Research Projects */}
+        <h3 className="text-2xl font-semibold text-foreground mb-8">Research Projects</h3>
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {projects.map((project) => (
+            <Card key={project.title} className="bg-card/50 border-border hover:border-primary/50 transition-all duration-300 group">
+              <CardHeader className="pb-2">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {project.title}
+                      {project.featured && (
+                        <Badge className="ml-2 bg-accent/20 text-accent border-accent/30">Featured</Badge>
+                      )}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">{project.location} • {project.year}</p>
+                  </div>
+                  <Badge variant="outline" className="border-primary/30 text-primary text-xs">
+                    {project.status}
+                  </Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-sm text-accent font-medium mb-3">Impact: {project.impact}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-xs border-border text-muted-foreground">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Timeline */}
+        <h3 className="text-2xl font-semibold text-foreground mb-8">Journey Timeline</h3>
+        <div className="relative mb-16">
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-primary/30" />
+          <div className="space-y-8">
+            {timeline.map((item, index) => (
+              <div key={index} className="relative pl-12">
+                <div className="absolute left-2 top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+                <p className="text-accent font-bold">{item.year}</p>
+                <p className="text-foreground">{item.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center p-6 rounded-xl border border-border bg-card/30">
+              <p className="text-3xl font-bold text-accent">{stat.value}</p>
+              <p className="text-sm text-muted-foreground">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WildlifeSection;
