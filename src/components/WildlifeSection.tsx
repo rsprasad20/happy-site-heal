@@ -85,7 +85,7 @@ const WildlifeSection = () => {
         </div>
 
         {/* Research Projects */}
-        <h3 className="text-2xl font-semibold text-foreground mb-8">Research Projects</h3>
+        <h3 id="research-projects" className="text-2xl font-semibold text-foreground mb-8">Research Projects</h3>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {projects.map((project) => (
             <Card key={project.title} className="bg-card/50 border-border hover:border-primary/50 transition-all duration-300 group">

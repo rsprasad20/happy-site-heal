@@ -52,7 +52,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-primary/10 text-primary hover:bg-primary/20 border border-primary/30"
-                onClick={() => document.getElementById('wildlife')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('research-projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore My Work
                 <ArrowDown className="ml-2 h-4 w-4" />
