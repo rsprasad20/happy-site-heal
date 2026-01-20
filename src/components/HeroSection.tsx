@@ -116,8 +116,8 @@ const HeroSection = () => {
               </div>
 
               <div className="absolute bottom-4 -right-20 md:bottom-8 md:-right-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
-                <p className="text-2xl font-bold text-accent">3+ Indian States</p>
-                <p className="text-xs text-muted-foreground">Study site across the western ghats</p>
+                <p className="text-2xl font-bold text-accent">2+ Indian States</p>
+                <p className="text-xs text-muted-foreground">Field sites across the Western Ghats</p>
               </div>
             </div>
           </div>
