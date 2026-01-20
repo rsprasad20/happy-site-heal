@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, Lightbulb, Heart } from "lucide-react";
 
 const skills = [
-  "Wildlife Conservation", "Data Science", "AI Research", "Field Biology",
+  "Wildlife Conservation", "Data Science", "Field Biology",
   "Python", "R", "Machine Learning", "Statistical Analysis",
   "Research Writing", "Grant Writing", "Photography", "Storytelling",
   "QGIS Maps", "Science Publications"
