@@ -24,16 +24,13 @@ const AboutSection = () => {
           {/* Left - Bio */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a PhD candidate in Wildlife Conservation with a focus on Human Elephant Conflict (HEC), I stand at the intersection of nature and technology, using data science and AI to unlock the secrets of wildlife behavior and ecosystem dynamics.
+              As a Postdoctoral Fellow in Wildlife Conservation, I build on insights from my doctoral research to tackle pressing questions about human–wildlife conflict worldwide.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My journey began in the field, tracking endangered species and documenting their stories. Today, I combine fieldwork with cutting-edge technology to create predictive models that help conservationists make informed decisions about habitat protection and species recovery.
+              My journey has taken me into the field in South India, where I worked with communities to understand their relationships with elephants in a biodiversity hotspot, the Western Ghats. Today, I combine these experiences with interdisciplinary approaches to research the underpinnings of conflict, which can inform on habitat restoration, and species recovery.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond research, I'm passionate about storytelling - whether through academic writing, book reviews, or capturing the beauty of wildlife through photography. I believe that data tells stories, and stories inspire action.
-            </p>
-            <p className="text-muted-foreground italic border-l-2 border-primary pl-4">
-              When I'm not in the field or analyzing data, you'll find me curating book reviews for The Little Book Club or dancing in the streets of the city.
+              Beyond research, I love storytelling – whether through scientific communication, book reviews, or capturing the beauty of wildlife underwater while scuba diving. I believe data tells stories, and stories inspire action, driving meaningful change in conservation.
             </p>
           </div>
 
