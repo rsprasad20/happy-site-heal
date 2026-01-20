@@ -80,8 +80,8 @@ const AboutSection = () => {
           <Card className="bg-card/50 border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6">
               <Lightbulb className="w-8 h-8 text-primary mb-4" />
-              <h4 className="font-semibold text-foreground mb-2">Data Innovation</h4>
-              <p className="text-sm text-muted-foreground">Pioneering AI models for species behavior prediction</p>
+              <h4 className="font-semibold text-foreground mb-2">Data Analysis</h4>
+              <p className="text-sm text-muted-foreground">Currently utilising statistical and econometric techniques to analyse spatio-temporal wildlife conflict and compensation data across India</p>
             </CardContent>
           </Card>
 
