@@ -111,8 +111,8 @@ const HeroSection = () => {
               
               {/* Floating Stats - positioned relative to image */}
               <div className="absolute top-4 -left-20 md:top-8 md:-left-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
-                <p className="text-2xl font-bold text-accent">500+</p>
-                <p className="text-xs text-muted-foreground">Research Field Interviews</p>
+                <p className="text-2xl font-bold text-accent">500*+</p>
+                <p className="text-xs text-muted-foreground">Field Interviews</p>
               </div>
 
               <div className="absolute bottom-4 -right-20 md:bottom-8 md:-right-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
