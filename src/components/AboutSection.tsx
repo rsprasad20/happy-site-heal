@@ -42,7 +42,7 @@ const AboutSection = () => {
                 <span 
                   key={skill} 
                   className="px-5 py-2.5 rounded-full border border-primary bg-transparent text-primary hover:bg-primary/10 transition-colors"
-                  style={{ fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 600, fontSize: '15px' }}
+                  style={{ fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 600, fontSize: '13px' }}
                 >
                   {skill}
                 </span>
