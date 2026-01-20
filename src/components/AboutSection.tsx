@@ -37,7 +37,7 @@ const AboutSection = () => {
           {/* Right - Skills */}
           <div className="space-y-8">
             <h3 className="text-xl font-semibold text-foreground">Expertise & Skills</h3>
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-x-4 gap-y-3">
               {skills.map((skill) => (
                 <span 
                   key={skill} 
