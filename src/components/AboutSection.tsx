@@ -56,8 +56,8 @@ const AboutSection = () => {
           <Card className="bg-card/50 border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6">
               <GraduationCap className="w-8 h-8 text-primary mb-4" />
-              <h4 className="font-semibold text-foreground mb-2">PhD in Wildlife Conservation</h4>
-              <p className="text-sm text-muted-foreground">Focus on Human Elephant Conflict (HEC)</p>
+              <h4 className="font-semibold text-foreground mb-2">PhD Wildlife Conservation and Ecology</h4>
+              <p className="text-sm text-muted-foreground">Thesis Title: Ascertaining the socio-economic and ecological drivers behind human and Asian elephant (<em>Elephas maximus</em>) Casualty and Mortality patterns in south India</p>
             </CardContent>
           </Card>
 
