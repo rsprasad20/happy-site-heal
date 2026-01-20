@@ -110,7 +110,7 @@ const HeroSection = () => {
               <img 
                 src={simranPortrait} 
                 alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
-                className="w-[300px] md:w-[400px] h-auto object-cover"
+                className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full object-cover border-4 border-primary/30"
               />
             </div>
 
