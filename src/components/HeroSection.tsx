@@ -64,7 +64,7 @@ const HeroSection = () => {
                 asChild
               >
                 <a href="https://www.nature.com/articles/s41598-025-14867-3" target="_blank" rel="noopener noreferrer">
-                  Read My Research
+                  Read my latest publication
                 </a>
               </Button>
             </div>
