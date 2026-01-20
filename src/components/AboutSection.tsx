@@ -91,7 +91,7 @@ const AboutSection = () => {
               <h4 className="font-semibold text-foreground mb-2">Conservation Impact</h4>
               <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• Cohort 12 - <a href="https://collaborativeconservation.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Center for Collaborative Conservation (CCC)</a> Fellow at Colorado State University</li>
-                <li>• Gentry Award Winner for Best Poster presentation at the 60th Annual Meeting of the Association for Tropical Biology Conference (ATBC) in Kigali, Rwanda</li>
+                <li>• <a href="https://tropicalbiology.org/blog/2024/10/29/atbc-2024-best-presentation-award-winners/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Gentry Award Winner for Best Poster presentation</a> at the 60th Annual Meeting of the Association for Tropical Biology Conference (ATBC) in Kigali, Rwanda</li>
                 <li>• <a href="https://www.nyas.org/programs/global-stem-alliance/1000-girls-1000-futures/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The New York Academy of Sciences - 1000 Girls, 1000 Future's Mentor</a></li>
               </ul>
             </CardContent>
