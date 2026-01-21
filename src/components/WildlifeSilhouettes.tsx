@@ -4,38 +4,40 @@ import tigerSilhouette from "@/assets/silhouette-tiger.png";
 import rhinoSilhouette from "@/assets/silhouette-rhino.png";
 
 const WildlifeSilhouettes = () => {
+  const silhouetteStyle = "opacity-[0.12] brightness-0 invert drop-shadow-[0_0_1px_rgba(255,255,255,0.4)] drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]";
+  
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Elephant - bottom left */}
+      {/* Elephant - bottom left, prominent */}
       <img
         src={elephantSilhouette}
         alt=""
         aria-hidden="true"
-        className="absolute bottom-8 left-4 w-32 md:w-48 opacity-[0.06] mix-blend-soft-light"
+        className={`absolute bottom-12 left-8 w-40 md:w-56 ${silhouetteStyle}`}
       />
       
-      {/* Pangolin - top right area */}
+      {/* Pangolin - middle right area */}
       <img
         src={pangolinSilhouette}
         alt=""
         aria-hidden="true"
-        className="absolute top-20 right-8 w-20 md:w-28 opacity-[0.05] mix-blend-soft-light"
+        className={`absolute top-1/4 right-4 w-24 md:w-32 ${silhouetteStyle}`}
       />
       
-      {/* Tiger - bottom right */}
+      {/* Tiger - bottom right corner */}
       <img
         src={tigerSilhouette}
         alt=""
         aria-hidden="true"
-        className="absolute bottom-16 right-12 w-28 md:w-40 opacity-[0.05] mix-blend-soft-light"
+        className={`absolute bottom-20 right-8 w-36 md:w-48 ${silhouetteStyle}`}
       />
       
-      {/* Rhino - left side middle */}
+      {/* Rhino - top left area */}
       <img
         src={rhinoSilhouette}
         alt=""
         aria-hidden="true"
-        className="absolute top-1/3 left-8 w-24 md:w-36 opacity-[0.05] mix-blend-soft-light"
+        className={`absolute top-16 left-12 w-28 md:w-40 ${silhouetteStyle}`}
       />
     </div>
   );
