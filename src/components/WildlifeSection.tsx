@@ -60,7 +60,9 @@ const projects = [
     tags: ["Field Surveys", "Mixed Methods", "GIS", "R", "Thematic Analysis"]
   },
   {
-    title: "Assessing Drivers Affecting the Presence of the Sunda Pangolin (Manis javanica) in Contrasting Thailand Landscapes",
+    title: "Assessing Drivers Affecting the Presence of the Sunda Pangolin",
+    scientificName: "Manis javanica",
+    titleSuffix: "in Contrasting Thailand Landscapes",
     location: "Western Ghats",
     year: "2022-2023",
     status: "Published",
@@ -193,6 +195,8 @@ const WildlifeSection = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                       {project.title}
+                      {project.scientificName && <em> ({project.scientificName})</em>}
+                      {project.titleSuffix && ` ${project.titleSuffix}`}
                       {project.featured && (
                         <Badge className="ml-2 bg-accent/20 text-accent border-accent/30">Featured</Badge>
                       )}
