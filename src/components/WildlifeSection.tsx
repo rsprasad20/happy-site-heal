@@ -68,7 +68,7 @@ const projects = [
     status: "Published",
     description: "The critically endangered Sunda pangolin represents the most illegally traded mammal in the world. As a result of long-term overexploitation for traditional medicine and meat consumption, these cryptic animals are on the brink of extinction. The project combined socioeconomic and ecological factors using community and ranger surveys to assess anthropogenic effects on the presence of Sunda pangolins. The primary goal was to support management plans that effectively conserve pangolins in different ecological landscapes.",
     impact: "Demand reduction project report with ZSL Thailand, TRAFFIC and the Wildlife Trade Monitoring Network",
-    tags: ["Data Analysis", "Tracking", "Conflict Resolution"]
+    tags: ["Illegal Wildlife Trade", "Socio-economic Research", "Quantitative Data Analysis"]
   },
   {
     title: "Bird Species Recovery Program",
