@@ -103,11 +103,14 @@ const HeroSection = () => {
 
             {/* Portrait with floating stats */}
             <div className="relative z-10">
-              <img 
-                src={simranPortrait} 
-                alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
-                className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full object-cover border-4 border-primary/30 animate-[pulse_3s_ease-in-out_infinite]"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full border-4 border-primary/50 animate-[pulse_2s_ease-in-out_infinite]" />
+                <img 
+                  src={simranPortrait} 
+                  alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
+                  className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full object-cover border-4 border-transparent"
+                />
+              </div>
               
               {/* Floating Stats - positioned relative to image */}
               <div className="absolute top-4 -left-20 md:top-8 md:-left-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
