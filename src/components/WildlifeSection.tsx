@@ -72,8 +72,8 @@ const projects = [
   },
   {
     title: "Investigating the Electromagneto Reception in Homing Pigeons",
-    location: "Bharatpur Bird Sanctuary",
-    year: "2021-2022",
+    location: "Bangor, Wales",
+    year: "2019",
     status: "Completed",
     description: "Implemented AI-powered monitoring system for endangered migratory birds, improving population tracking accuracy.",
     impact: "50+ species",
