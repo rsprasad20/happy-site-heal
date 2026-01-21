@@ -104,7 +104,7 @@ const HeroSection = () => {
             {/* Portrait with floating stats */}
             <div className="relative z-10">
               <div className="relative">
-                <div className="absolute inset-0 rounded-full border-4 border-primary/50 animate-[pulse_2s_ease-in-out_infinite]" />
+                <div className="absolute inset-0 rounded-full border-4 border-primary/50 animate-[pulse_2s_ease-in-out_infinite] shadow-[0_0_30px_10px_hsl(158_65%_45%/0.3),0_0_60px_20px_hsl(158_65%_45%/0.15)]" />
                 <img 
                   src={simranPortrait} 
                   alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
