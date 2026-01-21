@@ -66,7 +66,7 @@ const projects = [
     location: "London, UK",
     year: "2020",
     status: "Published",
-    description: "Used GPS collars and predictive analytics to map elephant migration routes, reducing human-wildlife conflict by 40%.",
+    description: "The critically endangered Sunda pangolin represents the most illegally traded mammal in the world. As a result of long-term overexploitation for traditional medicine and meat consumption, these cryptic animals are on the brink of extinction. The project combined socioeconomic and ecological factors using community and ranger surveys to assess anthropogenic effects on the presence of Sunda pangolins. The primary goal was to support management plans that effectively conserve pangolins in different ecological landscapes.",
     impact: "800+ elephants",
     tags: ["Data Analysis", "Tracking", "Conflict Resolution"]
   },
