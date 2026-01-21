@@ -4,7 +4,7 @@ import simranPortrait from "@/assets/simran-portrait.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a1f1a]">
       {/* Background glow effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,hsl(158_65%_45%/0.08)_0%,transparent_60%)]" />
       
