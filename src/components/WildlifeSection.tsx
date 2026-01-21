@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
@@ -7,6 +8,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog";
+import { Play } from "lucide-react";
 import fieldwork1 from "@/assets/fieldwork-1.jpg";
 import fieldwork2 from "@/assets/fieldwork-2.jpg";
 import fieldwork3 from "@/assets/fieldwork-3.jpg";
@@ -33,6 +39,12 @@ const fieldworkImages = [
   { src: fieldwork10, alt: "Tiger in natural habitat" },
   { src: fieldwork11, alt: "Presenting at Imperial College London" },
   { src: fieldwork12, alt: "Marine research diving expedition" },
+];
+
+const fieldworkVideos = [
+  { src: "/videos/fieldwork-video-1.mp4", title: "Wildlife in the Field", thumbnail: fieldwork7 },
+  { src: "/videos/fieldwork-video-2.mp4", title: "Research Expedition", thumbnail: fieldwork4 },
+  { src: "/videos/fieldwork-video-3.mp4", title: "Conservation Work", thumbnail: fieldwork3 },
 ];
 
 const projects = [
@@ -90,6 +102,8 @@ const stats = [
 ];
 
 const WildlifeSection = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
   return (
     <section id="wildlife" className="py-24 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,hsl(158_65%_45%/0.05)_0%,transparent_50%)]" />
@@ -127,6 +141,46 @@ const WildlifeSection = () => {
             <p className="text-muted-foreground">Documenting wildlife behavior in their natural habitat</p>
           </div>
         </div>
+
+        {/* Fieldwork Videos */}
+        <h3 className="text-2xl font-semibold text-foreground mb-8">Field Videos</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {fieldworkVideos.map((video, index) => (
+            <div 
+              key={index}
+              className="relative rounded-2xl overflow-hidden cursor-pointer group"
+              onClick={() => setSelectedVideo(video.src)}
+            >
+              <img 
+                src={video.thumbnail} 
+                alt={video.title}
+                className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-background/40 flex items-center justify-center group-hover:bg-background/30 transition-colors">
+                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background to-transparent">
+                <p className="text-foreground font-medium">{video.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Video Dialog */}
+        <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
+          <DialogContent className="max-w-4xl p-0 bg-background border-border">
+            {selectedVideo && (
+              <video 
+                src={selectedVideo} 
+                controls 
+                autoPlay 
+                className="w-full rounded-lg"
+              />
+            )}
+          </DialogContent>
+        </Dialog>
 
         {/* Research Projects */}
         <h3 id="research-projects" className="text-2xl font-semibold text-foreground mb-8">Research Projects</h3>
