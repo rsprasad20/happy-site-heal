@@ -60,7 +60,7 @@ const projects = [
     tags: ["Field Surveys", "Mixed Methods", "GIS", "R", "Thematic Analysis"]
   },
   {
-    title: "Elephant Migration Patterns",
+    title: "Assessing Drivers Affecting the Presence of the Sunda Pangolin (Manis javanica) in Contrasting Thailand Landscapes",
     location: "Western Ghats",
     year: "2022-2023",
     status: "Published",
