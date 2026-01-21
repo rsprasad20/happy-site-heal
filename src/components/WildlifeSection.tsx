@@ -17,6 +17,7 @@ import fieldwork7 from "@/assets/fieldwork-7.jpg";
 import fieldwork8 from "@/assets/fieldwork-8.jpg";
 import fieldwork9 from "@/assets/fieldwork-9.jpg";
 import fieldwork10 from "@/assets/fieldwork-10.jpg";
+import fieldwork11 from "@/assets/fieldwork-11.jpg";
 
 const fieldworkImages = [
   { src: fieldwork1, alt: "Sunset over mountain landscape" },
@@ -29,6 +30,7 @@ const fieldworkImages = [
   { src: fieldwork8, alt: "Elephant family in forest" },
   { src: fieldwork9, alt: "Elephant crossing road" },
   { src: fieldwork10, alt: "Tiger in natural habitat" },
+  { src: fieldwork11, alt: "Presenting at Imperial College London" },
 ];
 
 const projects = [
