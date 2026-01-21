@@ -50,7 +50,7 @@ const fieldworkVideos = [
 const projects = [
   {
     title: "Investigating Environmental & Socio-Economic Drivers of Human-Elephant Conflict",
-    location: "Bandipur National Park, Nagarahole National Park, Palakkad and Mannarkkad Forest Divisions",
+    location: "Location: Bandipur National Park, Nagarahole National Park, Palakkad and Mannarkkad Forest Divisions",
     year: "2020-2025",
     status: "Ongoing",
     featured: true,
