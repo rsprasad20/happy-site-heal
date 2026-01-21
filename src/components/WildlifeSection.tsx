@@ -49,14 +49,14 @@ const fieldworkVideos = [
 
 const projects = [
   {
-    title: "Tiger Habitat Mapping with AI",
-    location: "Ranthambore National Park",
+    title: "Investigating Environmental & Socio-Economic Drivers of Human-Elephant Conflict",
+    location: "South India",
     year: "2023-2024",
     status: "Ongoing",
     featured: true,
-    description: "Developed machine learning models to predict optimal tiger habitat corridors, resulting in 23% improvement in conservation area designation.",
-    impact: "150+ tigers",
-    tags: ["AI/ML", "GIS", "Conservation"]
+    description: "Investigating the environmental and socio-economic drivers of human and Asian elephant (Elephas maximus) casualty and mortality patterns in south India.",
+    impact: "Human-Elephant Coexistence",
+    tags: ["Human-Wildlife Conflict", "Conservation", "Elephas maximus"]
   },
   {
     title: "Elephant Migration Patterns",
