@@ -51,7 +51,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary/10 text-primary hover:bg-primary/20 border border-primary/30"
+                className="bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-900 font-semibold hover:from-emerald-400 hover:to-teal-300 border-0"
                 onClick={() => document.getElementById('research-projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore My Work
@@ -59,8 +59,7 @@ const HeroSection = () => {
               </Button>
               <Button 
                 size="lg"
-                variant="outline"
-                className="border-primary/30 text-primary hover:bg-primary/10"
+                className="bg-gradient-to-r from-yellow-400 to-amber-300 text-slate-900 font-semibold hover:from-yellow-300 hover:to-amber-200 border-0"
                 asChild
               >
                 <a href="https://www.nature.com/articles/s41598-025-14867-3" target="_blank" rel="noopener noreferrer">
