@@ -1,6 +1,35 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import wildlifeWork from "@/assets/wildlife-work.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import fieldwork1 from "@/assets/fieldwork-1.jpg";
+import fieldwork2 from "@/assets/fieldwork-2.jpg";
+import fieldwork3 from "@/assets/fieldwork-3.jpg";
+import fieldwork4 from "@/assets/fieldwork-4.jpg";
+import fieldwork5 from "@/assets/fieldwork-5.jpg";
+import fieldwork6 from "@/assets/fieldwork-6.jpg";
+import fieldwork7 from "@/assets/fieldwork-7.jpg";
+import fieldwork8 from "@/assets/fieldwork-8.jpg";
+import fieldwork9 from "@/assets/fieldwork-9.jpg";
+import fieldwork10 from "@/assets/fieldwork-10.jpg";
+
+const fieldworkImages = [
+  { src: fieldwork1, alt: "Sunset over mountain landscape" },
+  { src: fieldwork2, alt: "Forest canopy research area" },
+  { src: fieldwork3, alt: "Fieldwork in lush vegetation" },
+  { src: fieldwork4, alt: "Researchers surveying grasslands" },
+  { src: fieldwork5, alt: "Tea plantation landscape" },
+  { src: fieldwork6, alt: "Botanical specimens collection" },
+  { src: fieldwork7, alt: "Wild elephant in natural habitat" },
+  { src: fieldwork8, alt: "Elephant family in forest" },
+  { src: fieldwork9, alt: "Elephant crossing road" },
+  { src: fieldwork10, alt: "Tiger in natural habitat" },
+];
 
 const projects = [
   {
@@ -69,15 +98,27 @@ const WildlifeSection = () => {
           Utilizing robust, interdisciplinary methods to answer novel questions and tackle conservation challenges across diverse landscapes and ecosystems.
         </p>
 
-        {/* Fieldwork Image */}
-        <div className="relative rounded-2xl overflow-hidden mb-16 group">
-          <img 
-            src={wildlifeWork} 
-            alt="Wildlife conservation fieldwork"
-            className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-          <div className="absolute bottom-8 left-8">
+        {/* Fieldwork Image Carousel */}
+        <div className="relative mb-16">
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {fieldworkImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative rounded-2xl overflow-hidden group">
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
+          <div className="mt-4 text-center">
             <h3 className="text-2xl font-serif font-bold text-foreground">Fieldwork in Action</h3>
             <p className="text-muted-foreground">Documenting wildlife behavior in their natural habitat</p>
           </div>
