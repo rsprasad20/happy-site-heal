@@ -66,7 +66,7 @@ const WildlifeSection = () => {
           <span className="text-primary">Research</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          Exploring the intersection of technology and nature to create innovative solutions for wildlife conservation challenges across diverse ecosystems.
+          Utilizing robust, interdisciplinary methods to answer novel questions and tackle conservation challenges across diverse landscapes and ecosystems.
         </p>
 
         {/* Fieldwork Image */}
