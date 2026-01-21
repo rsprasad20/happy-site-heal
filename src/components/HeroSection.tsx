@@ -59,7 +59,7 @@ const HeroSection = () => {
               </Button>
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-400 text-slate-900 font-semibold hover:from-yellow-200 hover:via-amber-300 hover:to-orange-300 border-0"
+                className="bg-gradient-to-r from-lime-400 via-emerald-400 to-teal-500 text-slate-900 font-semibold hover:from-lime-300 hover:via-emerald-300 hover:to-teal-400 border-0"
                 asChild
               >
                 <a href="https://www.nature.com/articles/s41598-025-14867-3" target="_blank" rel="noopener noreferrer">
