@@ -71,7 +71,7 @@ const projects = [
     tags: ["Illegal Wildlife Trade", "Socio-economic Research", "Quantitative Data Analysis"]
   },
   {
-    title: "Bird Species Recovery Program",
+    title: "Investigating the Electromagneto Reception in Homing Pigeons",
     location: "Bharatpur Bird Sanctuary",
     year: "2021-2022",
     status: "Completed",
