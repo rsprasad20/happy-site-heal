@@ -106,7 +106,7 @@ const HeroSection = () => {
               <img 
                 src={simranPortrait} 
                 alt="Dr. Simran Prasad - Wildlife Conservation Researcher"
-                className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full object-cover border-4 border-primary/30"
+                className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full object-cover border-4 border-primary/30 animate-[pulse_3s_ease-in-out_infinite]"
               />
               
               {/* Floating Stats - positioned relative to image */}
