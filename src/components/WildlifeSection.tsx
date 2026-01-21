@@ -63,8 +63,7 @@ const WildlifeSection = () => {
       
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-          <span className="text-primary">Wildlife</span>
-          <span className="text-foreground">Conservation</span>
+          <span className="text-primary">Research</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
           Exploring the intersection of technology and nature to create innovative solutions for wildlife conservation challenges across diverse ecosystems.
