@@ -50,8 +50,8 @@ const fieldworkVideos = [
 const projects = [
   {
     title: "Investigating Environmental & Socio-Economic Drivers of Human-Elephant Conflict",
-    location: "South India",
-    year: "2023-2024",
+    location: "Bandipur National Park, Nagarahole National Park, Palakkad and Mannarkkad Forest Divisions",
+    year: "2020-2025",
     status: "Ongoing",
     featured: true,
     description: "Investigating the environmental and socio-economic drivers of human and Asian elephant (Elephas maximus) casualty and mortality patterns in south India.",
