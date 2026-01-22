@@ -279,17 +279,13 @@ const WildlifeSection = () => {
               href={news.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-4 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 cursor-pointer"
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(news.url, '_blank', 'noopener,noreferrer');
-              }}
+              className="group flex items-center justify-between p-4 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300"
             >
-              <div className="pointer-events-none">
+              <div>
                 <p className="text-foreground font-medium group-hover:text-primary transition-colors">{news.title}</p>
                 <p className="text-sm text-muted-foreground">{news.outlet}</p>
               </div>
-              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4 pointer-events-none" />
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
             </a>
           ))}
         </div>
