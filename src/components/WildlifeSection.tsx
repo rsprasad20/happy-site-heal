@@ -101,8 +101,8 @@ const projects = [
     year: "2025-2026",
     status: "Ongoing",
     institute: { name: "Centre for Wildlife Studies (CWS)", url: "https://cwsindia.org" },
-    description: "This project examines the spatio-temporal patterns of compensation claims related to human-wildlife conflict across India, analyzing data to understand trends, hotspots, and the effectiveness of compensation schemes in mitigating conflict impacts on local communities.",
-    impact: "National-scale analysis",
+    description: "This project analyzes spatio-temporal patterns of human–wildlife conflict and associated ex-gratia compensation across India using a comprehensive dataset spanning 20 years and 28 States. By integrating large-scale compensation records from forest departments, the study examines trends, regional disparities, and temporal changes in compensation payments to communities affected by wildlife conflict. Quantitative and econometric methods are employed to assess how compensation patterns vary across space and time, with implications for equity, policy effectiveness, and conservation governance.",
+    impact: "Worked with 700+ Forest Divisions across 28 States in India for data collection",
     tags: ["Human-Wildlife Conflict", "Spatial Analysis", "Compensation", "GIS"]
   }
 ];
