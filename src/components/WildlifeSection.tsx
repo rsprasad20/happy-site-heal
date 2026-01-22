@@ -117,7 +117,7 @@ const stats = [
   { value: "4+", label: "Active Projects" },
   { value: "600+", label: "Publications Read" },
   { value: "8", label: "Publications" },
-  { value: "5", label: "Conservation Awards" },
+  { value: "3", label: "Conservation Awards" },
 ];
 
 const WildlifeSection = () => {
