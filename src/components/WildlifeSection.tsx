@@ -28,7 +28,7 @@ import fieldwork12 from "@/assets/fieldwork-12.jpg";
 
 const fieldworkImagesBase = [
   { src: fieldwork1, alt: "Sunset over the mountains of the Western Ghats" },
-  { src: fieldwork2, alt: "Forest canopy research area" },
+  { src: fieldwork2, alt: "Fieldwork in Palakkad Forests, Kerala India" },
   { src: fieldwork3, alt: "Fieldwork in the Shola Forest, Tamil Nadu India" },
   { src: fieldwork4, alt: "Fieldwork in Shola Forest, Tamil Nadu India" },
   { src: fieldwork5, alt: "Tea plantation landscape in the Nilgiris, Tamil Nadu India" },
