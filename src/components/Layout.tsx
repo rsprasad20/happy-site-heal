@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-6 lg:px-12 text-center text-sm text-muted-foreground">
-          <p>© 2024 Dr. Simran Prasad. All rights reserved.</p>
+          <p>© 2026 Dr. Simran Prasad. All rights reserved.</p>
         </div>
       </footer>
     </div>
