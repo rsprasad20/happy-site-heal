@@ -240,13 +240,32 @@ const Research = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center p-6 rounded-xl border border-border bg-card/30">
                 <p className="text-3xl font-bold text-accent">{stat.value}</p>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
             ))}
+          </div>
+
+          {/* Publications */}
+          <h3 className="text-2xl font-semibold text-foreground mb-8">Publications</h3>
+          <div className="p-6 rounded-xl border border-border bg-card/30 hover:border-primary/50 transition-all duration-300">
+            <p className="text-muted-foreground mb-4">
+              Explore my peer-reviewed research publications on human-wildlife conflict, conservation science, and ecological studies.
+            </p>
+            <a 
+              href="https://scholar.google.com/citations?user=YOUR_ID" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+            >
+              Read my research
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
