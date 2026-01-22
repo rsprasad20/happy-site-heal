@@ -77,7 +77,6 @@ const projects = [
     location: "Location: Bandipur National Park, Nagarahole National Park, Palakkad and Mannarkkad Forest Divisions",
     year: "2020-2025",
     status: "Ongoing",
-    featured: true,
     institute: { name: "Centre for Wildlife Studies (CWS)", url: "https://cwsindia.org" },
     description: "The Asian elephant (Elephas maximus) is distributed over thirteen range states across Asia. Classified as 'Endangered' on the IUCN Red List of Threatened Species, elephants face particular challenges, as habitat ranges have contracted significantly over the last 50 years. This is mainly due to human influence in natural spaces, resulting in increased human–elephant interactions, many of which evolve into negative interactions (termed conflict). In India, elephants are the primary conflict-prone species, causing substantial damages to people through crop loss, property damage and even injury or loss of life. As a result of these occurrences, this project focuses on understanding important drivers that lead to injury and death of people and elephants. Drivers of conflict can vary and involve factors influenced by local agrarian economies, socio-economic variables, and ecological parameters. By identifying different socio-economic and ecological drivers through detailed field surveys with local community members, this project will focus on human and elephant casualty and mortality patterns and the solutions that can mitigate conflict incidences.",
     impact: "500+ Field Interviews, 4 Publications",
@@ -217,7 +216,7 @@ const WildlifeSection = () => {
                       {project.title}
                       {project.scientificName && <em> ({project.scientificName})</em>}
                       {project.titleSuffix && ` ${project.titleSuffix}`}
-                      {project.featured && (
+                      {'featured' in project && project.featured && (
                         <Badge className="ml-2 bg-accent/20 text-accent border-accent/30">Featured</Badge>
                       )}
                     </h4>
