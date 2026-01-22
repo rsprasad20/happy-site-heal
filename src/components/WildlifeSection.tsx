@@ -114,7 +114,7 @@ const timeline = [
 ];
 
 const stats = [
-  { value: "15+", label: "Active Projects" },
+  { value: "4+", label: "Active Projects" },
   { value: "200+", label: "Species Studied" },
   { value: "8", label: "Publications" },
   { value: "5", label: "Conservation Awards" },
