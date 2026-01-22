@@ -32,7 +32,7 @@ const fieldworkImagesBase = [
   { src: fieldwork3, alt: "Fieldwork in the Shola Forest, Tamil Nadu India" },
   { src: fieldwork4, alt: "Fieldwork in Palakkad Forests, Kerala India" },
   { src: fieldwork5, alt: "Tea plantation landscape in the Nilgiris, Tamil Nadu India" },
-  { src: fieldwork6, alt: "Botanical specimens collection Mannarkkad, Kerala India" },
+  { src: fieldwork6, alt: "Hickory Nut collection by local communities Mannarkkad, Kerala India" },
   { src: fieldwork7, alt: "Elephant in Nagarahole National Park, Karnataka India" },
   { src: fieldwork8, alt: "A herd of elephants in Bandipur National Park, Karnataka India" },
   { src: fieldwork9, alt: "Elephant in Nagarahole National Park, Karnataka India" },
