@@ -36,7 +36,7 @@ const fieldworkImagesBase = [
   { src: fieldwork7, alt: "Wild elephant in natural habitat" },
   { src: fieldwork8, alt: "Elephant family in forest" },
   { src: fieldwork9, alt: "Elephant crossing road" },
-  { src: fieldwork10, alt: "Tiger in natural habitat" },
+  { src: fieldwork10, alt: "Tiger spotting in Nagarahole National Park, Karnataka India" },
   { src: fieldwork11, alt: "Presenting at Imperial College London" },
   { src: fieldwork12, alt: "Marine research diving expedition" },
 ];
