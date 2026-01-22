@@ -33,7 +33,7 @@ const fieldworkImagesBase = [
   { src: fieldwork4, alt: "Researchers surveying grasslands" },
   { src: fieldwork5, alt: "Tea plantation landscape in the Nilgiris, Tamil Nadu India" },
   { src: fieldwork6, alt: "Botanical specimens collection" },
-  { src: fieldwork7, alt: "Wild elephant in natural habitat" },
+  { src: fieldwork7, alt: "Elephant in Nagarahole National Park, Karnataka India" },
   { src: fieldwork8, alt: "A herd of elephants in Bandipur National Park, Karnataka India" },
   { src: fieldwork9, alt: "Elephant crossing road" },
   { src: fieldwork10, alt: "Tiger spotting in Nagarahole National Park, Karnataka India" },
