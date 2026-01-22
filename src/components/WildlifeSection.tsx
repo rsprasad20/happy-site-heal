@@ -116,6 +116,11 @@ const newsCoverage = [
     title: "Study finds trenches are leading cause of elephant injuries and solar fences account for quarter of elephant deaths in Karnataka",
     outlet: "The Hindu",
     url: "https://www.thehindu.com/sci-tech/energy-and-environment/study-finds-trenches-are-leading-cause-of-elephant-injuries-and-solar-fences-account-for-quarter-of-elephant-deaths-in-karnataka/article70135603.ece"
+  },
+  {
+    title: "Man-elephant conflict depends upon environment, socio-economic factors",
+    outlet: "New Indian Express",
+    url: "https://www.newindianexpress.com/states/karnataka/2025/Oct/08/man-elephant-conflict-depends-upon-environment-socio-economic-factors"
   }
 ];
 
