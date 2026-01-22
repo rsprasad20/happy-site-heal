@@ -11,7 +11,7 @@ const HeroSection = () => {
       <StarryBackground />
       
       {/* Background glow effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,hsl(158_65%_45%/0.08)_0%,transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,hsl(158_65%_45%/0.08)_0%,transparent_60%)] pointer-events-none" />
       
       <div className="container mx-auto px-6 lg:px-12 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
