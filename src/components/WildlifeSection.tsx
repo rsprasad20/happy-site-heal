@@ -26,7 +26,7 @@ import fieldwork10 from "@/assets/fieldwork-10.jpg";
 import fieldwork11 from "@/assets/fieldwork-11.jpg";
 import fieldwork12 from "@/assets/fieldwork-12.jpg";
 
-const fieldworkImages = [
+const fieldworkImagesBase = [
   { src: fieldwork1, alt: "Sunset over mountain landscape" },
   { src: fieldwork2, alt: "Forest canopy research area" },
   { src: fieldwork3, alt: "Fieldwork in lush vegetation" },
@@ -40,6 +40,18 @@ const fieldworkImages = [
   { src: fieldwork11, alt: "Presenting at Imperial College London" },
   { src: fieldwork12, alt: "Marine research diving expedition" },
 ];
+
+// Shuffle array using Fisher-Yates algorithm
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+const fieldworkImages = shuffleArray(fieldworkImagesBase);
 
 const fieldworkVideos = [
   { src: "/videos/fieldwork-video-1.mp4", title: "Wildlife in the Field", thumbnail: fieldwork7 },
