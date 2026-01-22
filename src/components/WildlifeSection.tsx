@@ -96,13 +96,13 @@ const projects = [
     tags: ["Avian Navigation", "Oriana", "R"]
   },
   {
-    title: "Marine Ecosystem Health Assessment",
-    location: "Andaman Islands",
-    year: "2023",
-    status: "In Review",
-    description: "Conducted comprehensive health assessment of coral reef ecosystems using underwater drones and data analysis.",
-    impact: "12 reef sites",
-    tags: ["Marine Biology", "Drones", "Ecosystem Health"]
+    title: "Examining Spatio-Temporal Compensation Patterns of Human–Wildlife Conflict Across India",
+    location: "India",
+    year: "2024",
+    status: "Ongoing",
+    description: "This project examines the spatio-temporal patterns of compensation claims related to human-wildlife conflict across India, analyzing data to understand trends, hotspots, and the effectiveness of compensation schemes in mitigating conflict impacts on local communities.",
+    impact: "National-scale analysis",
+    tags: ["Human-Wildlife Conflict", "Spatial Analysis", "Compensation", "GIS"]
   }
 ];
 
