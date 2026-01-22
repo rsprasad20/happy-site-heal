@@ -1,4 +1,5 @@
-import { ArrowDown, Linkedin, Mail, Instagram } from "lucide-react";
+import { ArrowRight, ArrowDown, Linkedin, Mail, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import simranPortrait from "@/assets/simran-portrait.png";
 import StarryBackground from "./StarryBackground";
@@ -56,10 +57,12 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-lime-400 via-emerald-400 to-teal-500 text-slate-900 font-semibold hover:from-lime-300 hover:via-emerald-300 hover:to-teal-400 border-0"
-                onClick={() => document.getElementById('research-projects')?.scrollIntoView({ behavior: 'smooth' })}
+                asChild
               >
-                Explore My Work
-                <ArrowDown className="ml-2 h-4 w-4" />
+                <Link to="/research">
+                  Explore My Work
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button 
                 size="lg"

@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Research", href: "#wildlife" },
-  { label: "Books", href: "#books" },
-  { label: "Creative", href: "#creative" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/" },
+  { label: "Research", href: "/research" },
+  { label: "News Coverage", href: "/news-coverage" },
+  { label: "Journey", href: "/journey" },
+  { label: "Book Club", href: "/book-club" },
+  { label: "Creative", href: "/creative" },
+  { label: "Blog", href: "/blog" },
+  { label: "Collaborate", href: "/collaborate" },
 ];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,13 +27,10 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  // Close mobile menu on route change
+  useEffect(() => {
     setIsMobileOpen(false);
-  };
+  }, [location.pathname]);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -38,20 +39,24 @@ const Navigation = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="text-xl font-serif font-bold text-primary">
+          <Link to="/" className="text-xl font-serif font-bold text-primary">
             SP
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                to={item.href}
+                className={`text-sm transition-colors ${
+                  location.pathname === item.href
+                    ? "text-primary font-medium"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -72,13 +77,17 @@ const Navigation = () => {
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
           <div className="container mx-auto px-6 py-4 space-y-4">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2"
+                to={item.href}
+                className={`block w-full text-left py-2 transition-colors ${
+                  location.pathname === item.href
+                    ? "text-primary font-medium"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
         </div>

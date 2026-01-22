@@ -1,13 +1,14 @@
 import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
 
-const Index = () => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <HeroSection />
-      <AboutSection />
+      <main>{children}</main>
       
       {/* Footer */}
       <footer className="py-8 border-t border-border">
@@ -19,4 +20,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Layout;
