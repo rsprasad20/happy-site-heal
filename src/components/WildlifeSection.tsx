@@ -111,6 +111,11 @@ const newsCoverage = [
     title: "Rainfall, acreage influence community adoption of elephant mitigation measures, says study",
     outlet: "Mongabay",
     url: "https://india.mongabay.com/short-article/2025/10/rainfall-acreage-influence-community-adoption-of-elephant-mitigation-measures-says-study/"
+  },
+  {
+    title: "Study finds trenches are leading cause of elephant injuries and solar fences account for quarter of elephant deaths in Karnataka",
+    outlet: "The Hindu",
+    url: "https://www.thehindu.com/sci-tech/energy-and-environment/study-finds-trenches-are-leading-cause-of-elephant-injuries-and-solar-fences-account-for-quarter-of-elephant-deaths-in-karnataka/article70135603.ece"
   }
 ];
 
