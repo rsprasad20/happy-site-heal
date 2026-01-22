@@ -127,13 +127,13 @@ const WildlifeSection = () => {
             <CarouselContent>
               {fieldworkImages.map((image, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative rounded-2xl overflow-hidden group">
+                  <div className="relative rounded-2xl overflow-hidden group bg-card/30 flex items-center justify-center">
                     <img 
                       src={image.src} 
                       alt={image.alt}
-                      className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-[400px] object-contain transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none" />
                   </div>
                 </CarouselItem>
               ))}
