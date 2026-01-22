@@ -29,7 +29,7 @@ import fieldwork12 from "@/assets/fieldwork-12.jpg";
 const fieldworkImagesBase = [
   { src: fieldwork1, alt: "Sunset over the mountains of the Western Ghats" },
   { src: fieldwork2, alt: "Forest canopy research area" },
-  { src: fieldwork3, alt: "Fieldwork in lush vegetation" },
+  { src: fieldwork3, alt: "Fieldwork in the Shola Forest, Tamil Nadu India" },
   { src: fieldwork4, alt: "Researchers surveying grasslands" },
   { src: fieldwork5, alt: "Tea plantation landscape in the Nilgiris, Tamil Nadu India" },
   { src: fieldwork6, alt: "Botanical specimens collection" },
