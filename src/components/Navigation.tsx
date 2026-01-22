@@ -38,10 +38,6 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="text-xl font-serif font-bold text-primary">
-            SP
-          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
