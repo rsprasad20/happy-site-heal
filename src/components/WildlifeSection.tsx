@@ -107,7 +107,7 @@ const projects = [
 ];
 
 const timeline = [
-  { year: "2026", title: "Post Doctoral Researcher - Centre for Wildlife Studies" },
+  { year: "2026", title: "Post Doctoral Researcher - Centre for Wildlife Studies, Remotely based in Dubai UAE" },
   { year: "2020", title: "Doctoral Researcher - Centre for Wildlife Studies" },
   { year: "2020", title: "Master of Science Ecology, Evolution & Conservation - Imperial College London, London UK" },
   { year: "2016", title: "Bachelor of Science (Hons.) Zoology with Marine Zoology - Bangor University, Wales UK" },
