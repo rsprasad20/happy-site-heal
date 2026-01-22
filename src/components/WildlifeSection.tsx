@@ -25,6 +25,7 @@ import fieldwork9 from "@/assets/fieldwork-9.jpg";
 import fieldwork10 from "@/assets/fieldwork-10.jpg";
 import fieldwork11 from "@/assets/fieldwork-11.jpg";
 import fieldwork12 from "@/assets/fieldwork-12.jpg";
+import fieldwork13 from "@/assets/fieldwork-13.jpg";
 
 const fieldworkImagesBase = [
   { src: fieldwork1, alt: "Sunset over the mountains of the Western Ghats" },
@@ -39,6 +40,7 @@ const fieldworkImagesBase = [
   { src: fieldwork10, alt: "Tiger spotting in Nagarahole National Park, Karnataka India" },
   { src: fieldwork11, alt: "Speaking engagement at Imperial College London Event, Bengaluru India" },
   { src: fieldwork12, alt: "Nitrox Scuba dive at Magic point (Wobbegong Shark Nursery) Sydney, Australia" },
+  { src: fieldwork13, alt: "Poster Award ATBC Meeting Kigali, Rwanda" },
 ];
 
 // Shuffle array using Fisher-Yates algorithm
