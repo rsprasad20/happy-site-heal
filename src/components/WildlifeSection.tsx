@@ -37,7 +37,7 @@ const fieldworkImagesBase = [
   { src: fieldwork8, alt: "A herd of elephants in Bandipur National Park, Karnataka India" },
   { src: fieldwork9, alt: "Elephant in Nagarahole National Park, Karnataka India" },
   { src: fieldwork10, alt: "Tiger spotting in Nagarahole National Park, Karnataka India" },
-  { src: fieldwork11, alt: "Presenting at Imperial College London" },
+  { src: fieldwork11, alt: "Speaking engagement at Imperial College London Event, Bengaluru India" },
   { src: fieldwork12, alt: "Nitrox Scuba dive at Magic point (Wobbegong Shark Nursery) Sydney, Australia" },
 ];
 
