@@ -27,7 +27,7 @@ import fieldwork11 from "@/assets/fieldwork-11.jpg";
 import fieldwork12 from "@/assets/fieldwork-12.jpg";
 
 const fieldworkImagesBase = [
-  { src: fieldwork1, alt: "Sunset over mountain landscape" },
+  { src: fieldwork1, alt: "Sunset over the mountains of the Western Ghats" },
   { src: fieldwork2, alt: "Forest canopy research area" },
   { src: fieldwork3, alt: "Fieldwork in lush vegetation" },
   { src: fieldwork4, alt: "Researchers surveying grasslands" },
