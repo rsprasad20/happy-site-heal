@@ -103,7 +103,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Image with decorative elements */}
-          <div className="relative flex justify-center lg:justify-end -mt-8">
+          <div className="relative flex justify-center lg:justify-center -mt-8">
             {/* Glowing orb background */}
             <div className="absolute w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-radial from-primary/20 via-primary/5 to-transparent blur-2xl" />
 
@@ -119,12 +119,12 @@ const HeroSection = () => {
               </div>
               
               {/* Floating Stats - positioned relative to image */}
-              <div className="absolute top-4 -left-20 md:top-8 md:-left-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
+              <div className="absolute top-4 -left-16 md:top-8 md:-left-20 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
                 <p className="text-2xl font-bold text-accent">500+</p>
                 <p className="text-xs text-muted-foreground">Research Field Interviews</p>
               </div>
 
-              <div className="absolute bottom-4 -right-20 md:bottom-8 md:-right-24 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
+              <div className="absolute bottom-4 -right-12 md:bottom-8 md:-right-16 p-4 rounded-xl border border-border bg-card/80 backdrop-blur-sm z-20">
                 <p className="text-2xl font-bold text-accent">2+ Indian States</p>
                 <p className="text-xs text-muted-foreground">Field sites across the Western Ghats</p>
               </div>
