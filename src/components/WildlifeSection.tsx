@@ -110,7 +110,7 @@ const timeline = [
   { year: "2025", title: "Post Doctoral Researcher - Centre for Wildlife Studies" },
   { year: "2020", title: "Doctoral Researcher - Centre for Wildlife Studies" },
   { year: "2019", title: "Master of Science Ecology, Evolution & Conservation - Imperial College of London" },
-  { year: "2016", title: "Bachelor of Science Zoology with Marine Zoology - Bangor University" },
+  { year: "2016", title: "Bachelor of Science (Hons.) Zoology with Marine Zoology - Bangor University, Wales UK" },
 ];
 
 const stats = [
