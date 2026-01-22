@@ -38,7 +38,7 @@ const fieldworkImagesBase = [
   { src: fieldwork9, alt: "Elephant crossing road" },
   { src: fieldwork10, alt: "Tiger spotting in Nagarahole National Park, Karnataka India" },
   { src: fieldwork11, alt: "Presenting at Imperial College London" },
-  { src: fieldwork12, alt: "Marine research diving expedition" },
+  { src: fieldwork12, alt: "Nitrox Scuba dive at Magic point (Wobbegong Shark Nursery) Sydney, Australia" },
 ];
 
 // Shuffle array using Fisher-Yates algorithm
