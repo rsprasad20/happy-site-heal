@@ -146,6 +146,9 @@ const WildlifeSection = () => {
                       className="w-full h-[400px] object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                      <p className="text-foreground font-medium text-center">{image.alt}</p>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
