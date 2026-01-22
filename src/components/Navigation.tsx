@@ -37,7 +37,7 @@ const Navigation = () => {
       isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-end h-16">
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
