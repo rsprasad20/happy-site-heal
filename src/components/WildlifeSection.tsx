@@ -160,7 +160,7 @@ const WildlifeSection = () => {
           </Carousel>
           <div className="mt-4 text-center">
             <h3 className="text-2xl font-serif font-bold text-foreground">Fieldwork in Action</h3>
-            <p className="text-muted-foreground">Documenting wildlife behavior in their natural habitat</p>
+            <p className="text-muted-foreground">Documenting my research activities</p>
           </div>
         </div>
 
