@@ -121,6 +121,11 @@ const newsCoverage = [
     title: "Man-elephant conflict depends upon environment, socio-economic factors",
     outlet: "New Indian Express",
     url: "https://www.newindianexpress.com/states/karnataka/2025/Oct/08/man-elephant-conflict-depends-upon-environment-socio-economic-factors"
+  },
+  {
+    title: "Trenches leading cause for elephant injuries: Study",
+    outlet: "The Times of India",
+    url: "https://timesofindia.indiatimes.com/city/mangaluru/trenches-leading-cause-for-elephant-injuries-study/articleshow/124395031.cms"
   }
 ];
 
