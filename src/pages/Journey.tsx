@@ -8,6 +8,7 @@ const timeline = [
     subtitle: "Zoology with Marine Zoology - Bangor University, Wales UK",
     icon: BookOpen,
     institution: "BU",
+    institutionUrl: "https://www.bangor.ac.uk",
     institutionColor: "from-purple-500 to-violet-600"
   },
   { 
@@ -16,6 +17,7 @@ const timeline = [
     subtitle: "Ecology, Evolution & Conservation - Imperial College London, London UK",
     icon: GraduationCap,
     institution: "ICL",
+    institutionUrl: "https://www.imperial.ac.uk",
     institutionColor: "from-blue-500 to-indigo-600"
   },
   { 
@@ -24,6 +26,7 @@ const timeline = [
     subtitle: "Centre for Wildlife Studies, Bengaluru, India",
     icon: FlaskConical,
     institution: "CWS",
+    institutionUrl: "https://cwsindia.org",
     institutionColor: "from-emerald-500 to-teal-600"
   },
   { 
@@ -32,6 +35,7 @@ const timeline = [
     subtitle: "Centre for Wildlife Studies, Remotely based in Dubai UAE",
     icon: Microscope,
     institution: "CWS",
+    institutionUrl: "https://cwsindia.org",
     institutionColor: "from-emerald-500 to-teal-600"
   },
 ];
@@ -101,9 +105,14 @@ const Journey = () => {
                         <div className="absolute bottom-[60%] w-52">
                           <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
                             <div className="flex items-center gap-2 mb-2">
-                              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg`}>
+                              <a 
+                                href={item.institutionUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
+                              >
                                 <span className="text-white font-bold text-[10px]">{item.institution}</span>
-                              </div>
+                              </a>
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
                             <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
@@ -126,9 +135,14 @@ const Journey = () => {
                           <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-px h-8 bg-gradient-to-t from-primary/60 to-transparent" />
                           <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
                             <div className="flex items-center gap-2 mb-2">
-                              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg`}>
+                              <a 
+                                href={item.institutionUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
+                              >
                                 <span className="text-white font-bold text-[10px]">{item.institution}</span>
-                              </div>
+                              </a>
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
                             <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
