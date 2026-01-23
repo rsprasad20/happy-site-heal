@@ -9,7 +9,8 @@ const timeline = [
     icon: BookOpen,
     institution: "BU",
     institutionUrl: "https://www.bangor.ac.uk",
-    institutionColor: "from-purple-500 to-violet-600"
+    institutionColor: "from-purple-500 to-violet-600",
+    useLogo: true
   },
   { 
     year: "2020", 
@@ -103,21 +104,38 @@ const Journey = () => {
                       {/* Top Cards */}
                       {isTop && (
                         <div className="absolute bottom-[60%] w-52">
-                          <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
+                          <a 
+                            href={item.useLogo ? item.institutionUrl : undefined}
+                            target={item.useLogo ? "_blank" : undefined}
+                            rel={item.useLogo ? "noopener noreferrer" : undefined}
+                            className={`block p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group ${item.useLogo ? 'cursor-pointer' : ''}`}
+                          >
                             <div className="flex items-center gap-2 mb-2">
-                              <a 
-                                href={item.institutionUrl} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
-                              >
-                                <span className="text-white font-bold text-[10px]">{item.institution}</span>
-                              </a>
+                              {item.useLogo ? (
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
+                                  <svg viewBox="0 0 100 100" className="w-6 h-6">
+                                    <rect x="10" y="20" width="80" height="60" fill="#7D2248" rx="4"/>
+                                    <rect x="20" y="30" width="20" height="40" fill="#FFD700"/>
+                                    <rect x="45" y="30" width="35" height="15" fill="#FFD700"/>
+                                    <rect x="45" y="50" width="35" height="20" fill="#FFD700"/>
+                                  </svg>
+                                </div>
+                              ) : (
+                                <a 
+                                  href={item.institutionUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <span className="text-white font-bold text-[10px]">{item.institution}</span>
+                                </a>
+                              )}
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
                             <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
                             <p className="text-muted-foreground text-xs mt-1 leading-tight">{item.subtitle}</p>
-                          </div>
+                          </a>
                           {/* Connector line */}
                           <div className="absolute left-1/2 -translate-x-1/2 top-full w-px h-8 bg-gradient-to-b from-primary/60 to-transparent" />
                         </div>
@@ -135,14 +153,30 @@ const Journey = () => {
                           <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-px h-8 bg-gradient-to-t from-primary/60 to-transparent" />
                           <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
                             <div className="flex items-center gap-2 mb-2">
-                              <a 
-                                href={item.institutionUrl} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
-                              >
-                                <span className="text-white font-bold text-[10px]">{item.institution}</span>
-                              </a>
+                              {item.useLogo ? (
+                                <a 
+                                  href={item.institutionUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden"
+                                >
+                                  <svg viewBox="0 0 100 100" className="w-6 h-6">
+                                    <rect x="10" y="20" width="80" height="60" fill="#7D2248" rx="4"/>
+                                    <rect x="20" y="30" width="20" height="40" fill="#FFD700"/>
+                                    <rect x="45" y="30" width="35" height="15" fill="#FFD700"/>
+                                    <rect x="45" y="50" width="35" height="20" fill="#FFD700"/>
+                                  </svg>
+                                </a>
+                              ) : (
+                                <a 
+                                  href={item.institutionUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
+                                >
+                                  <span className="text-white font-bold text-[10px]">{item.institution}</span>
+                                </a>
+                              )}
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
                             <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
