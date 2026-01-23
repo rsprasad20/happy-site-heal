@@ -1,6 +1,7 @@
 import { GraduationCap, Microscope, BookOpen, FlaskConical } from "lucide-react";
 import Layout from "@/components/Layout";
 import bangorLogo from "@/assets/bangor-logo.jpeg";
+import imperialLogo from "@/assets/imperial-logo.jpeg";
 
 const timeline = [
   { 
@@ -11,7 +12,7 @@ const timeline = [
     institution: "BU",
     institutionUrl: "https://www.bangor.ac.uk",
     institutionColor: "from-purple-500 to-violet-600",
-    useLogo: true
+    useLogo: "bangor"
   },
   { 
     year: "2020", 
@@ -20,7 +21,8 @@ const timeline = [
     icon: GraduationCap,
     institution: "ICL",
     institutionUrl: "https://www.imperial.ac.uk",
-    institutionColor: "from-blue-500 to-indigo-600"
+    institutionColor: "from-blue-500 to-indigo-600",
+    useLogo: "imperial"
   },
   { 
     year: "2020", 
@@ -112,9 +114,13 @@ const Journey = () => {
                             className={`block p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group ${item.useLogo ? 'cursor-pointer' : ''}`}
                           >
                             <div className="flex items-center gap-2 mb-2">
-                              {item.useLogo ? (
+                              {item.useLogo === "bangor" ? (
                                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
+                                </div>
+                              ) : item.useLogo === "imperial" ? (
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                  <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
                               ) : (
                                 <a 
@@ -149,7 +155,7 @@ const Journey = () => {
                           <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-px h-8 bg-gradient-to-t from-primary/60 to-transparent" />
                           <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
                             <div className="flex items-center gap-2 mb-2">
-                              {item.useLogo ? (
+                              {item.useLogo === "bangor" ? (
                                 <a 
                                   href={item.institutionUrl}
                                   target="_blank"
@@ -157,6 +163,15 @@ const Journey = () => {
                                   className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden p-0.5"
                                 >
                                   <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
+                                </a>
+                              ) : item.useLogo === "imperial" ? (
+                                <a 
+                                  href={item.institutionUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden p-0.5"
+                                >
+                                  <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </a>
                               ) : (
                                 <a 
