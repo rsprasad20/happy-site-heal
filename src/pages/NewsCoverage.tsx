@@ -210,6 +210,17 @@ const NewsCoverage = () => {
               </div>
               <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
             </a>
+            <a
+              href="https://cwsindia.org/traction-in-wildlife-tourism-exploring-nature-viewing-preferences-across-three-indian-protected-areas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300"
+            >
+              <div>
+                <p className="text-lg text-foreground font-medium group-hover:text-primary transition-colors">Traction in Wildlife Tourism: exploring nature-viewing preferences across three Indian protected areas</p>
+              </div>
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
+            </a>
           </div>
         </div>
       </section>
