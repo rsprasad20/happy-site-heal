@@ -86,6 +86,14 @@ const HeroSection = () => {
                 <Linkedin className="w-5 h-5 text-primary" />
               </a>
               <a 
+                href="https://orcid.org/0009-0009-4197-0090" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-colors flex items-center justify-center"
+              >
+                <span className="text-primary font-bold text-xs">ORCiD</span>
+              </a>
+              <a 
                 href="mailto:simranprasaduae@gmail.com"
                 className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-colors"
               >
