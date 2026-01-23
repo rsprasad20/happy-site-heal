@@ -1,10 +1,39 @@
+import { GraduationCap, Microscope, BookOpen, FlaskConical } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const timeline = [
-  { year: "2026", title: "Post Doctoral Researcher", subtitle: "Centre for Wildlife Studies, Remotely based in Dubai UAE" },
-  { year: "2020", title: "Doctoral Researcher", subtitle: "Centre for Wildlife Studies, Bengaluru, India" },
-  { year: "2020", title: "Master of Science", subtitle: "Ecology, Evolution & Conservation - Imperial College London, London UK" },
-  { year: "2016", title: "Bachelor of Science (Hons.)", subtitle: "Zoology with Marine Zoology - Bangor University, Wales UK" },
+  { 
+    year: "2026", 
+    title: "Post Doctoral Researcher", 
+    subtitle: "Centre for Wildlife Studies, Remotely based in Dubai UAE",
+    icon: Microscope,
+    institution: "CWS",
+    institutionColor: "from-emerald-500 to-teal-600"
+  },
+  { 
+    year: "2020", 
+    title: "Doctoral Researcher", 
+    subtitle: "Centre for Wildlife Studies, Bengaluru, India",
+    icon: FlaskConical,
+    institution: "CWS",
+    institutionColor: "from-emerald-500 to-teal-600"
+  },
+  { 
+    year: "2020", 
+    title: "Master of Science", 
+    subtitle: "Ecology, Evolution & Conservation - Imperial College London, London UK",
+    icon: GraduationCap,
+    institution: "ICL",
+    institutionColor: "from-blue-500 to-indigo-600"
+  },
+  { 
+    year: "2016", 
+    title: "Bachelor of Science (Hons.)", 
+    subtitle: "Zoology with Marine Zoology - Bangor University, Wales UK",
+    icon: BookOpen,
+    institution: "BU",
+    institutionColor: "from-purple-500 to-violet-600"
+  },
 ];
 
 const Journey = () => {
@@ -26,6 +55,7 @@ const Journey = () => {
           <div className="relative max-w-5xl mx-auto">
             {timeline.map((item, index) => {
               const isLeft = index % 2 === 0;
+              const Icon = item.icon;
               
               return (
                 <div key={index} className="relative">
@@ -35,7 +65,12 @@ const Journey = () => {
                     <div className={`flex-1 ${isLeft ? 'pr-8 md:pr-12' : 'order-3 pl-8 md:pl-12'}`}>
                       {isLeft && (
                         <div className="p-6 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 text-right group">
-                          <p className="text-accent font-bold text-2xl mb-2">{item.year}</p>
+                          <div className="flex items-center justify-end gap-3 mb-3">
+                            <p className="text-accent font-bold text-2xl">{item.year}</p>
+                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg`}>
+                              <span className="text-white font-bold text-xs">{item.institution}</span>
+                            </div>
+                          </div>
                           <p className="text-foreground text-lg font-semibold group-hover:text-primary transition-colors">{item.title}</p>
                           <p className="text-muted-foreground">{item.subtitle}</p>
                         </div>
@@ -71,9 +106,9 @@ const Journey = () => {
                         </div>
                       )}
                       
-                      {/* Milestone marker */}
-                      <div className="w-12 h-12 rounded-full bg-primary/20 border-4 border-primary flex items-center justify-center shadow-[0_0_20px_hsl(var(--primary)/0.4)] z-20">
-                        <div className="w-4 h-4 rounded-full bg-primary animate-pulse" />
+                      {/* Milestone marker with icon */}
+                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${item.institutionColor} border-4 border-background flex items-center justify-center shadow-[0_0_20px_hsl(var(--primary)/0.4)] z-20`}>
+                        <Icon className="w-6 h-6 text-white" />
                       </div>
 
                       {/* Road segment below */}
@@ -106,7 +141,12 @@ const Journey = () => {
                     <div className={`flex-1 ${!isLeft ? 'pr-8 md:pr-12 order-1' : 'pl-8 md:pl-12'}`}>
                       {!isLeft && (
                         <div className="p-6 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 text-left group">
-                          <p className="text-accent font-bold text-2xl mb-2">{item.year}</p>
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg`}>
+                              <span className="text-white font-bold text-xs">{item.institution}</span>
+                            </div>
+                            <p className="text-accent font-bold text-2xl">{item.year}</p>
+                          </div>
                           <p className="text-foreground text-lg font-semibold group-hover:text-primary transition-colors">{item.title}</p>
                           <p className="text-muted-foreground">{item.subtitle}</p>
                         </div>
