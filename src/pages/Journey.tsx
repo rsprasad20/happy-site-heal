@@ -227,7 +227,7 @@ const Journey = () => {
               </div>
 
               {/* Journey continues message - inside the scroll container */}
-              <div className="absolute bottom-4 right-8">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
                 <p className="text-muted-foreground text-sm italic">The journey continues...</p>
               </div>
             </div>
