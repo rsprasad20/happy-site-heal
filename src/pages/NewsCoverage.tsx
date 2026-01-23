@@ -124,6 +124,17 @@ const NewsCoverage = () => {
               <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
             </a>
           </div>
+
+          {/* Blog Articles Section */}
+          <h2 className="text-2xl md:text-3xl font-serif font-medium text-primary mt-16 mb-8">
+            Blog Articles
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mb-8">
+            Written articles and blog posts on conservation topics, research insights, and field experiences.
+          </p>
+          <div className="grid gap-4">
+            {/* Blog articles will be added here */}
+          </div>
         </div>
       </section>
     </Layout>
