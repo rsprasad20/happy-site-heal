@@ -107,12 +107,7 @@ const Journey = () => {
                       {/* Top Cards */}
                       {isTop && (
                         <div className="absolute bottom-[60%] w-52">
-                          <a 
-                            href={item.useLogo ? item.institutionUrl : undefined}
-                            target={item.useLogo ? "_blank" : undefined}
-                            rel={item.useLogo ? "noopener noreferrer" : undefined}
-                            className={`block p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group ${item.useLogo ? 'cursor-pointer' : ''}`}
-                          >
+                          <div className="block p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo === "bangor" ? (
                                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
@@ -128,16 +123,35 @@ const Journey = () => {
                                   target="_blank" 
                                   rel="noopener noreferrer"
                                   className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.institutionColor} flex items-center justify-center shadow-lg hover:scale-110 transition-transform`}
-                                  onClick={(e) => e.stopPropagation()}
                                 >
                                   <span className="text-white font-bold text-[10px]">{item.institution}</span>
                                 </a>
                               )}
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
-                            <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
+                            {item.useLogo === "imperial" ? (
+                              <a 
+                                href={item.institutionUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground text-sm font-semibold hover:text-primary transition-colors leading-tight block"
+                              >
+                                {item.title}
+                              </a>
+                            ) : item.useLogo === "bangor" ? (
+                              <a 
+                                href={item.institutionUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground text-sm font-semibold hover:text-primary transition-colors leading-tight block"
+                              >
+                                {item.title}
+                              </a>
+                            ) : (
+                              <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
+                            )}
                             <p className="text-muted-foreground text-xs mt-1 leading-tight">{item.subtitle}</p>
-                          </a>
+                          </div>
                           {/* Connector line */}
                           <div className="absolute left-1/2 -translate-x-1/2 top-full w-px h-8 bg-gradient-to-b from-primary/60 to-transparent" />
                         </div>
