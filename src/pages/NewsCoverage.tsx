@@ -59,6 +59,19 @@ const NewsCoverage = () => {
               </a>
             ))}
           </div>
+
+          {/* Webinars Section */}
+          <h2 className="text-2xl md:text-3xl font-serif font-medium text-primary mt-16 mb-8">
+            Webinars
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mb-8">
+            Webinars and online presentations on conservation research and human-wildlife coexistence.
+          </p>
+          <div className="grid gap-4">
+            <div className="p-6 rounded-xl border border-border bg-card/30 text-muted-foreground">
+              Coming soon...
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
