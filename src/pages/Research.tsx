@@ -110,6 +110,7 @@ const projects = [
 const stats = [
   { value: "4+", label: "Active Projects" },
   { value: "600+", label: "Publications Read" },
+  { value: "20+", label: "Students Mentored" },
   { value: "8", label: "Publications" },
   { value: "3", label: "Conservation Awards" },
 ];
