@@ -101,6 +101,17 @@ const NewsCoverage = () => {
               </div>
               <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
             </a>
+            <a
+              href="https://www.youtube.com/watch?v=syk-XMdpCZc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300"
+            >
+              <div>
+                <p className="text-lg text-foreground font-medium group-hover:text-primary transition-colors">CWS Wildlife Chronicles #43 - Into troubled waters: Exploring the impact of trawling on marine ecosystems</p>
+              </div>
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
+            </a>
           </div>
         </div>
       </section>
