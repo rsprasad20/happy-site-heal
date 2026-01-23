@@ -225,12 +225,12 @@ const Journey = () => {
                   <span className="text-sm">🚀</span>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Journey continues message */}
-          <div className="text-center mt-4">
-            <p className="text-muted-foreground text-sm italic">The journey continues...</p>
+              {/* Journey continues message - inside the scroll container */}
+              <div className="absolute bottom-4 right-8">
+                <p className="text-muted-foreground text-sm italic">The journey continues...</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
