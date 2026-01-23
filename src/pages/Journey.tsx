@@ -1,7 +1,7 @@
 import { GraduationCap, Microscope, BookOpen, FlaskConical } from "lucide-react";
 import Layout from "@/components/Layout";
 import bangorLogo from "@/assets/bangor-logo.jpeg";
-import imperialLogo from "@/assets/imperial-logo.jpeg";
+import imperialLogo from "@/assets/imperial-logo.png";
 import cwsLogo from "@/assets/cws-logo.jpeg";
 
 const timeline = [
