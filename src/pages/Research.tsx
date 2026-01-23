@@ -256,7 +256,7 @@ const Research = () => {
               Explore my peer-reviewed research publications on human-wildlife conflict, conservation science, and ecological studies.
             </p>
             <a 
-              href="https://scholar.google.com/citations?user=XfC53TIAAAAJ&hl=en"
+              href="https://scholar.google.com/citations?user=q4DHZSoAAAAJ&hl=en&authuser=1"
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
