@@ -1,5 +1,6 @@
 import { GraduationCap, Microscope, BookOpen, FlaskConical } from "lucide-react";
 import Layout from "@/components/Layout";
+import bangorLogo from "@/assets/bangor-logo.jpeg";
 
 const timeline = [
   { 
@@ -112,13 +113,8 @@ const Journey = () => {
                           >
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo ? (
-                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
-                                  <svg viewBox="0 0 100 100" className="w-6 h-6">
-                                    <rect x="10" y="20" width="80" height="60" fill="#7D2248" rx="4"/>
-                                    <rect x="20" y="30" width="20" height="40" fill="#FFD700"/>
-                                    <rect x="45" y="30" width="35" height="15" fill="#FFD700"/>
-                                    <rect x="45" y="50" width="35" height="20" fill="#FFD700"/>
-                                  </svg>
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                  <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
                                 </div>
                               ) : (
                                 <a 
@@ -158,14 +154,9 @@ const Journey = () => {
                                   href={item.institutionUrl}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden"
+                                  className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden p-0.5"
                                 >
-                                  <svg viewBox="0 0 100 100" className="w-6 h-6">
-                                    <rect x="10" y="20" width="80" height="60" fill="#7D2248" rx="4"/>
-                                    <rect x="20" y="30" width="20" height="40" fill="#FFD700"/>
-                                    <rect x="45" y="30" width="35" height="15" fill="#FFD700"/>
-                                    <rect x="45" y="50" width="35" height="20" fill="#FFD700"/>
-                                  </svg>
+                                  <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
                                 </a>
                               ) : (
                                 <a 
