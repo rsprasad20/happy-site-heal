@@ -63,28 +63,28 @@ const Journey = () => {
           </p>
 
           {/* Horizontal Winding Road Timeline */}
-          <div className="relative overflow-x-auto py-8">
-            <div className="min-w-[900px] lg:min-w-full relative" style={{ height: '500px' }}>
+          <div className="relative overflow-x-auto py-12">
+            <div className="min-w-[1100px] lg:min-w-full relative" style={{ height: '600px' }}>
               
-              {/* Road SVG Background - positioned in middle */}
-              <div className="absolute top-1/2 left-0 right-0 h-24 -translate-y-1/2 pointer-events-none">
+              {/* Road SVG Background - positioned in middle with more dramatic curves */}
+              <div className="absolute top-1/2 left-0 right-0 h-40 -translate-y-1/2 pointer-events-none">
                 <svg 
-                  viewBox="0 0 1000 100" 
+                  viewBox="0 0 1000 160" 
                   className="w-full h-full" 
                   preserveAspectRatio="none"
                 >
-                  {/* Main road path - winding */}
+                  {/* Main road path - more dramatic winding */}
                   <path
-                    d="M0 50 Q125 15 250 50 Q375 85 500 50 Q625 15 750 50 Q875 85 1000 50"
+                    d="M0 80 Q125 10 250 80 Q375 150 500 80 Q625 10 750 80 Q875 150 1000 80"
                     fill="none"
                     stroke="hsl(var(--primary))"
-                    strokeWidth="35"
+                    strokeWidth="40"
                     strokeOpacity="0.2"
                     strokeLinecap="round"
                   />
                   {/* Center dashed line */}
                   <path
-                    d="M0 50 Q125 15 250 50 Q375 85 500 50 Q625 15 750 50 Q875 85 1000 50"
+                    d="M0 80 Q125 10 250 80 Q375 150 500 80 Q625 10 750 80 Q875 150 1000 80"
                     fill="none"
                     stroke="hsl(var(--primary))"
                     strokeWidth="3"
@@ -96,7 +96,7 @@ const Journey = () => {
               </div>
 
               {/* Timeline Items */}
-              <div className="relative h-full flex justify-between items-center px-12">
+              <div className="relative h-full flex justify-around items-center px-16">
                 {timeline.map((item, index) => {
                   const Icon = item.icon;
                   const isTop = index % 2 === 0;
@@ -105,7 +105,7 @@ const Journey = () => {
                     <div 
                       key={index} 
                       className="relative flex flex-col items-center"
-                      style={{ width: '20%' }}
+                      style={{ width: '22%' }}
                     >
                       {/* Top Cards */}
                       {isTop && (
