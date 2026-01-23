@@ -2,6 +2,7 @@ import { GraduationCap, Microscope, BookOpen, FlaskConical } from "lucide-react"
 import Layout from "@/components/Layout";
 import bangorLogo from "@/assets/bangor-logo.jpeg";
 import imperialLogo from "@/assets/imperial-logo.jpeg";
+import cwsLogo from "@/assets/cws-logo.jpeg";
 
 const timeline = [
   { 
@@ -31,7 +32,8 @@ const timeline = [
     icon: FlaskConical,
     institution: "CWS",
     institutionUrl: "https://cwsindia.org",
-    institutionColor: "from-emerald-500 to-teal-600"
+    institutionColor: "from-emerald-500 to-teal-600",
+    useLogo: "cws"
   },
   { 
     year: "2026", 
@@ -40,7 +42,8 @@ const timeline = [
     icon: Microscope,
     institution: "CWS",
     institutionUrl: "https://cwsindia.org",
-    institutionColor: "from-emerald-500 to-teal-600"
+    institutionColor: "from-emerald-500 to-teal-600",
+    useLogo: "cws"
   },
 ];
 
@@ -117,6 +120,10 @@ const Journey = () => {
                                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
+                              ) : item.useLogo === "cws" ? (
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                  <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-contain" />
+                                </div>
                               ) : (
                                 <a 
                                   href={item.institutionUrl} 
@@ -129,16 +136,7 @@ const Journey = () => {
                               )}
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
-                            {item.useLogo === "imperial" ? (
-                              <a 
-                                href={item.institutionUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-foreground text-sm font-semibold hover:text-primary transition-colors leading-tight block"
-                              >
-                                {item.title}
-                              </a>
-                            ) : item.useLogo === "bangor" ? (
+                            {item.useLogo ? (
                               <a 
                                 href={item.institutionUrl}
                                 target="_blank"
@@ -177,6 +175,10 @@ const Journey = () => {
                                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
+                              ) : item.useLogo === "cws" ? (
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                  <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-contain" />
+                                </div>
                               ) : (
                                 <a 
                                   href={item.institutionUrl} 
@@ -189,16 +191,7 @@ const Journey = () => {
                               )}
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
-                            {item.useLogo === "imperial" ? (
-                              <a 
-                                href={item.institutionUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-foreground text-sm font-semibold hover:text-primary transition-colors leading-tight block"
-                              >
-                                {item.title}
-                              </a>
-                            ) : item.useLogo === "bangor" ? (
+                            {item.useLogo ? (
                               <a 
                                 href={item.institutionUrl}
                                 target="_blank"
