@@ -241,7 +241,7 @@ const Research = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
+          <div className="grid grid-cols-5 gap-4 md:gap-6 mb-16">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center p-6 rounded-xl border border-border bg-card/30">
                 <p className="text-3xl font-bold text-accent">{stat.value}</p>
