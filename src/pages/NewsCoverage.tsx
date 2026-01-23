@@ -35,7 +35,7 @@ const NewsCoverage = () => {
             <span className="text-foreground">Scientific </span>
             <span className="text-primary">Communications</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-serif font-medium text-muted-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl font-serif font-medium text-primary mb-4">
             News Coverage
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mb-12">
