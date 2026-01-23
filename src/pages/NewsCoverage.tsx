@@ -31,10 +31,13 @@ const NewsCoverage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,hsl(158_65%_45%/0.05)_0%,transparent_50%)] pointer-events-none" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">
             <span className="text-foreground">Scientific </span>
             <span className="text-primary">Communications</span>
           </h1>
+          <h2 className="text-2xl md:text-3xl font-serif font-medium text-muted-foreground mb-4">
+            News Coverage
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mb-12">
             Media coverage and press mentions highlighting research on human-wildlife conflict and conservation efforts.
           </p>
