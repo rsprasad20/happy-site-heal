@@ -177,6 +177,17 @@ const NewsCoverage = () => {
               </div>
               <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
             </a>
+            <a
+              href="https://cwsindia.org/connectivity-through-corridors-habitat-composition-interactions-with-humans-and-ecological-limitations-shape-tiger-conservation-centre-for-wildlife-studies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 rounded-xl border border-border bg-card/30 hover:border-primary/50 hover:bg-card/50 transition-all duration-300"
+            >
+              <div>
+                <p className="text-lg text-foreground font-medium group-hover:text-primary transition-colors">Connectivity through corridors: Habitat composition, interactions with humans, and ecological limitations shape tiger conservation</p>
+              </div>
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-4" />
+            </a>
           </div>
         </div>
       </section>
