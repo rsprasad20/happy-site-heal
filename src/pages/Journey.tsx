@@ -170,23 +170,13 @@ const Journey = () => {
                           <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo === "bangor" ? (
-                                <a 
-                                  href={item.institutionUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden p-0.5"
-                                >
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
-                                </a>
+                                </div>
                               ) : item.useLogo === "imperial" ? (
-                                <a 
-                                  href={item.institutionUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden p-0.5"
-                                >
+                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
-                                </a>
+                                </div>
                               ) : (
                                 <a 
                                   href={item.institutionUrl} 
@@ -199,7 +189,27 @@ const Journey = () => {
                               )}
                               <p className="text-accent font-bold text-lg">{item.year}</p>
                             </div>
-                            <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
+                            {item.useLogo === "imperial" ? (
+                              <a 
+                                href={item.institutionUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground text-sm font-semibold hover:text-primary transition-colors leading-tight block"
+                              >
+                                {item.title}
+                              </a>
+                            ) : item.useLogo === "bangor" ? (
+                              <a 
+                                href={item.institutionUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground text-sm font-semibold hover:text-primary transition-colors leading-tight block"
+                              >
+                                {item.title}
+                              </a>
+                            ) : (
+                              <p className="text-foreground text-sm font-semibold group-hover:text-primary transition-colors leading-tight">{item.title}</p>
+                            )}
                             <p className="text-muted-foreground text-xs mt-1 leading-tight">{item.subtitle}</p>
                           </div>
                         </div>
