@@ -74,7 +74,7 @@ const Collaborate = () => {
               <h3 className="text-xl font-semibold text-foreground mb-6">Collaboration Opportunities</h3>
               <div className="grid gap-4">
                 {collaborationTypes.map((type) => (
-                  <Card key={type.title} className="bg-card/30 border-border">
+                  <Card key={type.title} className="bg-card/30 border-primary/50">
                     <CardContent className="p-4 flex items-start gap-3">
                       <type.icon className="w-5 h-5 text-primary mt-0.5" />
                       <div>
@@ -97,7 +97,7 @@ const Collaborate = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary/50 bg-card/30 transition-colors group"
+                    className="flex items-center gap-3 p-4 rounded-xl border border-primary/50 hover:border-primary bg-card/30 transition-colors group"
                   >
                     <link.icon className="w-5 h-5 text-primary" />
                     <div>
@@ -107,7 +107,7 @@ const Collaborate = () => {
                   </a>
                 ))}
                 {/* Current Status Card */}
-                <div className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card/30">
+                <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/50 bg-card/30">
                   <MapPin className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium text-foreground">Current Status</p>
