@@ -63,9 +63,16 @@ const Collaborate = () => {
             <span className="text-foreground">Let's </span>
             <span className="text-primary">Collaborate</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+          <p className="text-lg text-muted-foreground max-w-2xl mb-4">
             Whether you're interested in research collaboration, speaking engagements, or simply want to discuss conservation research, I'd love to hear from you.
           </p>
+          <a 
+            href="mailto:simranprasaduae@gmail.com" 
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-12"
+          >
+            <Mail className="w-4 h-4" />
+            simranprasaduae@gmail.com
+          </a>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
