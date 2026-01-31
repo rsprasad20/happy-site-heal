@@ -17,9 +17,9 @@ const BookClub = () => {
   return (
     <Layout>
       <section className="py-24 pt-32 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,hsl(158_65%_45%/0.05)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,hsl(158_65%_45%/0.05)_0%,transparent_50%)] pointer-events-none" />
         
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             <span className="text-foreground">The Little </span>
             <span className="text-primary">Book Club</span>
@@ -59,7 +59,7 @@ const BookClub = () => {
                 rel="noopener noreferrer"
                 className="group block cursor-pointer"
               >
-                <Card className="aspect-square bg-card/50 border-border hover:border-primary/50 transition-all duration-300 overflow-hidden pointer-events-none">
+                <Card className="aspect-square bg-card/50 border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
                   <CardContent className="p-0 h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
                     <div className="text-center p-4">
                       <Instagram className="w-8 h-8 text-primary/40 mx-auto mb-2 group-hover:text-primary/60 transition-colors" />
