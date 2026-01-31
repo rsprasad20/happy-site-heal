@@ -86,7 +86,7 @@ const Collaborate = () => {
             <span className="text-primary">Collaborate</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-            Whether you're interested in research collaboration, speaking engagements, or simply want to discuss wildlife conservation, I'd love to hear from you.
+            Whether you're interested in research collaboration, speaking engagements, or simply want to discuss conservation research, I'd love to hear from you.
           </p>
 
           <div className="grid lg:grid-cols-2 gap-12">
