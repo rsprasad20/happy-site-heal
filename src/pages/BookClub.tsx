@@ -99,7 +99,7 @@ const BookClub = () => {
           </div>
 
           <p className="text-muted-foreground text-center">
-            Follow my reading journey and join the conversation about books that shape our understanding of nature.
+            Follow my reading journey and join the conversation about books!
           </p>
         </div>
       </section>
