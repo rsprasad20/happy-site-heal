@@ -131,9 +131,9 @@ const Collaborate = () => {
   return (
     <Layout>
       <section className="py-24 pt-32 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,hsl(158_65%_45%/0.05)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,hsl(158_65%_45%/0.05)_0%,transparent_50%)] pointer-events-none" />
         
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             <span className="text-foreground">Let's </span>
             <span className="text-primary">Collaborate</span>
