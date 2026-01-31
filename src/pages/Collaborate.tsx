@@ -7,7 +7,7 @@ const collaborationTypes = [
   {
     icon: Users,
     title: "Research Collaboration",
-    description: "Joint research projects in wildlife conservation and AI applications"
+    description: "Joint research projects using mixed methods in wildlife conservation and ecology"
   },
   {
     icon: Mic,
