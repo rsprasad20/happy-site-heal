@@ -9,8 +9,6 @@ const navItems = [
   { label: "Sci Comm", href: "/sci-comm" },
   { label: "Journey", href: "/journey" },
   { label: "Book Club", href: "/book-club" },
-  { label: "Creative", href: "/creative" },
-  { label: "Blog", href: "/blog" },
   { label: "Collaborate", href: "/collaborate" },
 ];
 
