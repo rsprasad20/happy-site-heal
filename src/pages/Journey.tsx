@@ -283,8 +283,8 @@ const Journey = () => {
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
                               ) : item.useLogo === "cws" ? (
-                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
-                                  <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-contain" />
+                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
+                                  <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-cover scale-150" />
                                 </div>
                               ) : (
                                 <a 
@@ -351,8 +351,8 @@ const Journey = () => {
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
                               ) : item.useLogo === "cws" ? (
-                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
-                                  <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-contain" />
+                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
+                                  <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-cover scale-150" />
                                 </div>
                               ) : (
                                 <a 
