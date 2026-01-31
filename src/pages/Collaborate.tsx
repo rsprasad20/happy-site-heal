@@ -17,7 +17,7 @@ const collaborationTypes = [
   {
     icon: Pen,
     title: "Writing & Media",
-    description: "Science communication, articles, and interviews"
+    description: "Science articles and blogs"
   },
   {
     icon: GraduationCap,
