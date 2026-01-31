@@ -2,13 +2,50 @@ import { Instagram, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 
+import bookclubPost1 from "@/assets/bookclub-post-1.jpg";
+import bookclubPost2 from "@/assets/bookclub-post-2.png";
+import bookclubPost3 from "@/assets/bookclub-post-3.png";
+import bookclubPost4 from "@/assets/bookclub-post-4.png";
+import bookclubPost5 from "@/assets/bookclub-post-5.png";
+import bookclubPost6 from "@/assets/bookclub-post-6.png";
+
 const instagramPosts = [
-  { id: 1, placeholder: "Recent read spotlight" },
-  { id: 2, placeholder: "Book review" },
-  { id: 3, placeholder: "Reading corner" },
-  { id: 4, placeholder: "Quote of the week" },
-  { id: 5, placeholder: "Book recommendation" },
-  { id: 6, placeholder: "Currently reading" },
+  { 
+    id: 1, 
+    image: bookclubPost1,
+    title: "Rock Paper Scissors",
+    url: "https://www.instagram.com/the_little_bookclub/"
+  },
+  { 
+    id: 2, 
+    image: bookclubPost2,
+    title: "Independence",
+    url: "https://www.instagram.com/the_little_bookclub/"
+  },
+  { 
+    id: 3, 
+    image: bookclubPost3,
+    title: "Archer's Voice",
+    url: "https://www.instagram.com/the_little_bookclub/"
+  },
+  { 
+    id: 4, 
+    image: bookclubPost4,
+    title: "Book Haul",
+    url: "https://www.instagram.com/the_little_bookclub/"
+  },
+  { 
+    id: 5, 
+    image: bookclubPost5,
+    title: "Fall Reading",
+    url: "https://www.instagram.com/the_little_bookclub/"
+  },
+  { 
+    id: 6, 
+    image: bookclubPost6,
+    title: "Valmiki's Women",
+    url: "https://www.instagram.com/the_little_bookclub/"
+  },
 ];
 
 const BookClub = () => {
@@ -54,16 +91,20 @@ const BookClub = () => {
             {instagramPosts.map((post) => (
               <a
                 key={post.id}
-                href={instagramUrl}
+                href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block cursor-pointer"
+                className="group block"
               >
                 <Card className="aspect-square bg-card/50 border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-0 h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
-                    <div className="text-center p-4">
-                      <Instagram className="w-8 h-8 text-primary/40 mx-auto mb-2 group-hover:text-primary/60 transition-colors" />
-                      <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{post.placeholder}</p>
+                  <CardContent className="p-0 h-full relative">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                      <Instagram className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </CardContent>
                 </Card>
