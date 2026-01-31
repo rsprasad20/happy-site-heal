@@ -106,21 +106,18 @@ const Collaborate = () => {
                       </div>
                     </a>
                   ))}
-                </div>
-              </div>
-
-              {/* Status */}
-              <div className="p-6 rounded-xl border border-primary/30 bg-primary/5">
-                <div className="flex items-center gap-2 mb-2">
-                  <MapPin className="w-4 h-4 text-primary" />
-                  <h4 className="font-semibold text-foreground">Current Status</h4>
-                </div>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Based in Dubai, United Arab Emirates, open to global collaboration
-                </p>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-sm text-primary">Accepting Research Partnerships</span>
+                  {/* Current Status Card */}
+                  <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/30 bg-primary/5">
+                    <MapPin className="w-5 h-5 text-primary" />
+                    <div>
+                      <p className="font-medium text-foreground">Current Status</p>
+                      <p className="text-xs text-muted-foreground">Dubai, UAE • Open to global collaboration</p>
+                      <div className="flex items-center gap-1.5 mt-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                        <span className="text-xs text-primary">Accepting Partnerships</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
