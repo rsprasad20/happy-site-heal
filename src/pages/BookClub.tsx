@@ -36,14 +36,14 @@ const instagramPosts = [
   },
   { 
     id: 5, 
-    image: bookclubPost5,
-    title: "Fall Reading",
+    image: bookclubPost6,
+    title: "Valmiki's Women",
     url: "https://www.instagram.com/the_little_bookclub/"
   },
   { 
     id: 6, 
-    image: bookclubPost6,
-    title: "Valmiki's Women",
+    image: bookclubPost5,
+    title: "Fall Reading",
     url: "https://www.instagram.com/the_little_bookclub/"
   },
 ];
