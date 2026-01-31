@@ -1,4 +1,5 @@
-import { GraduationCap, Microscope, BookOpen, FlaskConical } from "lucide-react";
+import { GraduationCap, Microscope, BookOpen, FlaskConical, TreePine, Bird, Mountain, Compass } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import Layout from "@/components/Layout";
 import bangorLogo from "@/assets/bangor-logo.jpeg";
 import imperialLogo from "@/assets/imperial-logo.png";
@@ -47,7 +48,33 @@ const timeline = [
   },
 ];
 
+const decorativeIcons = [TreePine, Bird, Mountain, Compass, TreePine];
+
 const Journey = () => {
+  const [pathProgress, setPathProgress] = useState(0);
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+      
+      const rect = timelineRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate progress based on how much of the element is visible
+      const start = rect.top - windowHeight;
+      const end = rect.bottom;
+      const progress = Math.min(Math.max((windowHeight - rect.top) / (rect.height + windowHeight * 0.5), 0), 1);
+      
+      setPathProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Layout>
       <section className="py-24 pt-32 relative">
@@ -63,33 +90,73 @@ const Journey = () => {
           </p>
 
           {/* Horizontal Winding Road Timeline */}
-          <div className="relative overflow-x-auto py-12">
-            <div className="min-w-[1100px] lg:min-w-full relative" style={{ height: '600px' }}>
+          <div className="relative overflow-x-auto py-12" ref={timelineRef}>
+            <div className="min-w-[1100px] lg:min-w-full relative" style={{ height: '650px' }}>
               
-              {/* Road SVG Background - positioned in middle with more dramatic curves */}
+              {/* Decorative Icons along the path */}
+              <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 pointer-events-none">
+                {decorativeIcons.map((Icon, i) => (
+                  <div 
+                    key={i}
+                    className="absolute opacity-20 text-primary"
+                    style={{ 
+                      left: `${10 + i * 20}%`,
+                      top: i % 2 === 0 ? '-80px' : '80px',
+                      transform: `rotate(${i * 15 - 30}deg)`,
+                      transition: 'opacity 0.5s ease',
+                      opacity: pathProgress > (i * 0.2) ? 0.3 : 0.1
+                    }}
+                  >
+                    <Icon className="w-8 h-8" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Road SVG Background - with animated drawing effect */}
               <div className="absolute top-1/2 left-0 right-0 h-40 -translate-y-1/2 pointer-events-none">
                 <svg 
                   viewBox="0 0 1000 160" 
                   className="w-full h-full" 
                   preserveAspectRatio="none"
                 >
-                  {/* Main road path - more dramatic winding */}
+                  {/* Road shadow/glow */}
+                  <path
+                    d="M0 80 Q125 10 250 80 Q375 150 500 80 Q625 10 750 80 Q875 150 1000 80"
+                    fill="none"
+                    stroke="hsl(var(--primary))"
+                    strokeWidth="50"
+                    strokeOpacity="0.08"
+                    strokeLinecap="round"
+                  />
+                  {/* Main road path - background */}
+                  <path
+                    d="M0 80 Q125 10 250 80 Q375 150 500 80 Q625 10 750 80 Q875 150 1000 80"
+                    fill="none"
+                    stroke="hsl(var(--muted))"
+                    strokeWidth="40"
+                    strokeOpacity="0.3"
+                    strokeLinecap="round"
+                  />
+                  {/* Animated progress path */}
                   <path
                     d="M0 80 Q125 10 250 80 Q375 150 500 80 Q625 10 750 80 Q875 150 1000 80"
                     fill="none"
                     stroke="hsl(var(--primary))"
                     strokeWidth="40"
-                    strokeOpacity="0.2"
+                    strokeOpacity="0.4"
                     strokeLinecap="round"
+                    strokeDasharray="2000"
+                    strokeDashoffset={2000 - (2000 * pathProgress)}
+                    style={{ transition: 'stroke-dashoffset 0.3s ease-out' }}
                   />
-                  {/* Center dashed line */}
+                  {/* Center dashed line - animated */}
                   <path
                     d="M0 80 Q125 10 250 80 Q375 150 500 80 Q625 10 750 80 Q875 150 1000 80"
                     fill="none"
                     stroke="hsl(var(--primary))"
                     strokeWidth="3"
                     strokeDasharray="20 15"
-                    strokeOpacity="0.6"
+                    strokeOpacity="0.8"
                     strokeLinecap="round"
                   />
                 </svg>
@@ -100,17 +167,23 @@ const Journey = () => {
                 {timeline.map((item, index) => {
                   const Icon = item.icon;
                   const isTop = index % 2 === 0;
+                  const itemProgress = pathProgress > ((index + 0.5) / timeline.length) ? 1 : 0;
                   
                   return (
                     <div 
                       key={index} 
                       className="relative flex flex-col items-center"
-                      style={{ width: '22%' }}
+                      style={{ 
+                        width: '22%',
+                        opacity: pathProgress > (index * 0.2) ? 1 : 0.3,
+                        transform: `translateY(${pathProgress > (index * 0.2) ? 0 : 20}px)`,
+                        transition: 'opacity 0.5s ease, transform 0.5s ease'
+                      }}
                     >
                       {/* Top Cards */}
                       {isTop && (
                         <div className="absolute bottom-[60%] w-52">
-                          <div className="block p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
+                          <div className="block p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group shadow-lg hover:shadow-xl hover:shadow-primary/10">
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo === "bangor" ? (
                                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
@@ -156,7 +229,14 @@ const Journey = () => {
                       )}
 
                       {/* Milestone marker - centered */}
-                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${item.institutionColor} border-4 border-background flex items-center justify-center shadow-[0_0_25px_hsl(var(--primary)/0.4)] z-20 hover:scale-110 transition-transform cursor-pointer ${isTop ? 'mt-4' : '-mt-4'}`}>
+                      <div 
+                        className={`w-14 h-14 rounded-full bg-gradient-to-br ${item.institutionColor} border-4 border-background flex items-center justify-center shadow-[0_0_25px_hsl(var(--primary)/0.4)] z-20 hover:scale-110 transition-all duration-300 cursor-pointer ${isTop ? 'mt-4' : '-mt-4'}`}
+                        style={{
+                          boxShadow: pathProgress > (index * 0.25) 
+                            ? '0 0 30px hsl(var(--primary) / 0.5), 0 0 60px hsl(var(--primary) / 0.2)' 
+                            : '0 0 15px hsl(var(--primary) / 0.2)'
+                        }}
+                      >
                         <Icon className="w-6 h-6 text-white" />
                       </div>
 
@@ -165,7 +245,7 @@ const Journey = () => {
                         <div className="absolute top-[60%] w-52">
                           {/* Connector line */}
                           <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-px h-8 bg-gradient-to-t from-primary/60 to-transparent" />
-                          <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group">
+                          <div className="p-4 rounded-xl border border-border bg-card/60 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 backdrop-blur-sm group shadow-lg hover:shadow-xl hover:shadow-primary/10">
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo === "bangor" ? (
                                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
@@ -221,7 +301,13 @@ const Journey = () => {
               
               {/* End marker */}
               <div className="absolute top-1/2 right-2 -translate-y-1/2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-primary flex items-center justify-center shadow-[0_0_20px_hsl(var(--primary)/0.4)]">
+                <div 
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-primary flex items-center justify-center"
+                  style={{
+                    boxShadow: pathProgress > 0.9 ? '0 0 30px hsl(var(--primary) / 0.6)' : '0 0 10px hsl(var(--primary) / 0.3)',
+                    transition: 'box-shadow 0.5s ease'
+                  }}
+                >
                   <span className="text-sm">🚀</span>
                 </div>
               </div>
