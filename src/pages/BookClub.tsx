@@ -12,7 +12,7 @@ const instagramPosts = [
 ];
 
 const BookClub = () => {
-  const instagramUrl = "https://www.instagram.com/the_little_book_club";
+  const instagramUrl = "https://www.instagram.com/the_little_bookclub/";
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ const BookClub = () => {
             className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors mb-8 group"
           >
             <Instagram className="w-5 h-5" />
-            <span className="font-medium">@the_little_book_club</span>
+            <span className="font-medium">@the_little_bookclub</span>
             <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
 
@@ -57,9 +57,9 @@ const BookClub = () => {
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group"
+                className="group block cursor-pointer"
               >
-                <Card className="aspect-square bg-card/50 border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
+                <Card className="aspect-square bg-card/50 border-border hover:border-primary/50 transition-all duration-300 overflow-hidden pointer-events-none">
                   <CardContent className="p-0 h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
                     <div className="text-center p-4">
                       <Instagram className="w-8 h-8 text-primary/40 mx-auto mb-2 group-hover:text-primary/60 transition-colors" />
