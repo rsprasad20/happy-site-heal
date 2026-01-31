@@ -8,7 +8,7 @@ const navItems = [
   { label: "Research", href: "/research" },
   { label: "Sci Comm", href: "/sci-comm" },
   { label: "Journey", href: "/journey" },
-  { label: "Book Club", href: "/book-club" },
+  { label: "Creative", href: "/book-club" },
   { label: "Collaborate", href: "/collaborate" },
 ];
 
