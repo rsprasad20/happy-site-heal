@@ -92,7 +92,7 @@ const AboutSection = () => {
               <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• <a href="https://warnercnr.source.colostate.edu/csu-center-for-collaborative-conservation-welcomes-cohort-12-fellows/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Center for Collaborative Conservation (CCC) Fellow at Colorado State University</a></li>
                 <li>• <a href="https://tropicalbiology.org/blog/2024/10/29/atbc-2024-best-presentation-award-winners/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Gentry Award Winner for Best Poster Presentation at the 60th Annual Meeting of the Association for Tropical Biology Conference (ATBC) in Kigali, Rwanda</a></li>
-                <li>• <a href="https://www.nyas.org/ideas-insights/blog/keeping-girls-in-stem/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The New York Academy of Sciences</a> - 1000 Girls, 1000 Future's Mentor</li>
+                <li>• <a href="https://www.nyas.org/ideas-insights/blog/keeping-girls-in-stem/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The New York Academy of Sciences - 1000 Girls, 1000 Future's Mentor</a></li>
               </ul>
             </CardContent>
           </Card>
