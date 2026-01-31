@@ -84,7 +84,7 @@ const Journey = () => {
           </p>
 
           {/* Horizontal River Flow Timeline */}
-          <div className="relative overflow-x-auto py-12" ref={timelineRef}>
+          <div className="relative overflow-x-auto py-12 scrollbar-hide" ref={timelineRef} style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             <div className="min-w-[1100px] lg:min-w-full relative" style={{ height: '680px' }}>
               
               {/* Decorative nature elements */}
@@ -425,6 +425,9 @@ const Journey = () => {
           0%, 100% { transform: translateX(0) rotate(0deg); }
           25% { transform: translateX(5px) rotate(5deg); }
           75% { transform: translateX(-5px) rotate(-5deg); }
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </Layout>
