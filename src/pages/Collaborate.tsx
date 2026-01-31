@@ -107,7 +107,7 @@ const Collaborate = () => {
                   </a>
                 ))}
                 {/* Current Status Card */}
-                <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/50 bg-card/30">
+                <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/50 bg-card/30 animate-pulse">
                   <MapPin className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium text-foreground">Current Status</p>
