@@ -77,13 +77,6 @@ const BookClub = () => {
             <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
 
-          <blockquote className="border-l-4 border-primary pl-6 py-4 mb-12 max-w-2xl">
-            <p className="text-lg italic text-muted-foreground">
-              "Stories have the power to change how we see the world. Through books, I explore different lenses for understanding our place in nature's grand narrative."
-            </p>
-          </blockquote>
-
-          {/* Instagram Posts Grid */}
           <h2 className="text-2xl font-serif font-semibold text-foreground mb-6">
             Recent Posts
           </h2>
