@@ -107,15 +107,11 @@ const Collaborate = () => {
                   </a>
                 ))}
                 {/* Current Status Card */}
-                <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/30 bg-primary/5">
+                <div className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card/30">
                   <MapPin className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium text-foreground">Current Status</p>
-                    <p className="text-xs text-muted-foreground">Dubai, UAE • Open to global collaboration</p>
-                    <div className="flex items-center gap-1.5 mt-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                      <span className="text-xs text-primary">Accepting Partnerships</span>
-                    </div>
+                    <p className="text-xs text-muted-foreground">Dubai, UAE • Accepting Partnerships</p>
                   </div>
                 </div>
               </div>
