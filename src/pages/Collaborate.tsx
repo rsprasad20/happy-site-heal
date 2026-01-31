@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin, Mail, Instagram, Youtube, Users, Mic, Pen, GraduationCap, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -66,13 +67,12 @@ const Collaborate = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mb-4">
             Whether you're interested in research collaboration, speaking engagements, or simply want to discuss conservation research, I'd love to hear from you.
           </p>
-          <a 
-            href="mailto:simranprasaduae@gmail.com" 
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-12"
-          >
-            <Mail className="w-4 h-4" />
-            simranprasaduae@gmail.com
-          </a>
+          <Button asChild className="mb-12">
+            <a href="mailto:simranprasaduae@gmail.com">
+              <Mail className="w-4 h-4 mr-2" />
+              Send a Message
+            </a>
+          </Button>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
