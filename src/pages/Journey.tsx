@@ -275,7 +275,7 @@ const Journey = () => {
                           <div className="block p-4 rounded-xl border border-border bg-card/70 hover:border-primary/50 hover:bg-card/90 transition-all duration-300 backdrop-blur-sm group shadow-lg hover:shadow-xl hover:shadow-primary/10">
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo === "bangor" ? (
-                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
                                 </div>
                               ) : item.useLogo === "imperial" ? (
@@ -343,7 +343,7 @@ const Journey = () => {
                           <div className="p-4 rounded-xl border border-border bg-card/70 hover:border-primary/50 hover:bg-card/90 transition-all duration-300 backdrop-blur-sm group shadow-lg hover:shadow-xl hover:shadow-primary/10">
                             <div className="flex items-center gap-2 mb-2">
                               {item.useLogo === "bangor" ? (
-                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={bangorLogo} alt="Bangor University" className="w-full h-full object-contain" />
                                 </div>
                               ) : item.useLogo === "imperial" ? (
