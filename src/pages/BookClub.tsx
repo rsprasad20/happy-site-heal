@@ -12,8 +12,8 @@ import bookclubPost6 from "@/assets/bookclub-post-6.png";
 const instagramPosts = [
   { 
     id: 1, 
-    image: bookclubPost1,
-    title: "Rock Paper Scissors",
+    image: bookclubPost4,
+    title: "Book Haul",
     url: "https://www.instagram.com/the_little_bookclub/"
   },
   { 
@@ -30,8 +30,8 @@ const instagramPosts = [
   },
   { 
     id: 4, 
-    image: bookclubPost4,
-    title: "Book Haul",
+    image: bookclubPost1,
+    title: "Rock Paper Scissors",
     url: "https://www.instagram.com/the_little_bookclub/"
   },
   { 
