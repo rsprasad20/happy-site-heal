@@ -68,11 +68,18 @@ const Collaborate = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const subject = encodeURIComponent(formData.subject || "Collaboration Inquiry");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:simranprasaduae@gmail.com?subject=${subject}&body=${body}`;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you within 48 hours.",
+      title: "Opening Email Client",
+      description: "Your email app should open with the message details.",
     });
-    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
