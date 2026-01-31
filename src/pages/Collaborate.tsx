@@ -69,53 +69,52 @@ const Collaborate = () => {
           </Button>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6">Collaboration Opportunities</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {collaborationTypes.map((type) => (
-                    <Card key={type.title} className="bg-card/30 border-border">
-                      <CardContent className="p-4 flex items-start gap-3">
-                        <type.icon className="w-5 h-5 text-primary mt-0.5" />
-                        <div>
-                          <p className="font-medium text-foreground">{type.title}</p>
-                          <p className="text-xs text-muted-foreground">{type.description}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6">Get In Touch</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {socialLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary/50 bg-card/30 transition-colors group"
-                    >
-                      <link.icon className="w-5 h-5 text-primary" />
+            {/* Collaboration Opportunities */}
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Collaboration Opportunities</h3>
+              <div className="grid gap-4">
+                {collaborationTypes.map((type) => (
+                  <Card key={type.title} className="bg-card/30 border-border">
+                    <CardContent className="p-4 flex items-start gap-3">
+                      <type.icon className="w-5 h-5 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium text-foreground group-hover:text-primary transition-colors">{link.name}</p>
-                        <p className="text-xs text-muted-foreground">{link.description}</p>
+                        <p className="font-medium text-foreground">{type.title}</p>
+                        <p className="text-xs text-muted-foreground">{type.description}</p>
                       </div>
-                    </a>
-                  ))}
-                  {/* Current Status Card */}
-                  <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/30 bg-primary/5">
-                    <MapPin className="w-5 h-5 text-primary" />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Get In Touch */}
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Get In Touch</h3>
+              <div className="grid gap-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary/50 bg-card/30 transition-colors group"
+                  >
+                    <link.icon className="w-5 h-5 text-primary" />
                     <div>
-                      <p className="font-medium text-foreground">Current Status</p>
-                      <p className="text-xs text-muted-foreground">Dubai, UAE • Open to global collaboration</p>
-                      <div className="flex items-center gap-1.5 mt-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                        <span className="text-xs text-primary">Accepting Partnerships</span>
-                      </div>
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">{link.name}</p>
+                      <p className="text-xs text-muted-foreground">{link.description}</p>
+                    </div>
+                  </a>
+                ))}
+                {/* Current Status Card */}
+                <div className="flex items-center gap-3 p-4 rounded-xl border border-primary/30 bg-primary/5">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="font-medium text-foreground">Current Status</p>
+                    <p className="text-xs text-muted-foreground">Dubai, UAE • Open to global collaboration</p>
+                    <div className="flex items-center gap-1.5 mt-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                      <span className="text-xs text-primary">Accepting Partnerships</span>
                     </div>
                   </div>
                 </div>
