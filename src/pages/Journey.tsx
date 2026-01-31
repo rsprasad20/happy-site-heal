@@ -283,7 +283,7 @@ const Journey = () => {
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
                               ) : item.useLogo === "cws" ? (
-                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-contain" />
                                 </div>
                               ) : (
@@ -351,7 +351,7 @@ const Journey = () => {
                                   <img src={imperialLogo} alt="Imperial College London" className="w-full h-full object-contain" />
                                 </div>
                               ) : item.useLogo === "cws" ? (
-                                <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
+                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden p-0.5">
                                   <img src={cwsLogo} alt="Centre for Wildlife Studies" className="w-full h-full object-contain" />
                                 </div>
                               ) : (
