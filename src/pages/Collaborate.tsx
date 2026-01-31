@@ -22,7 +22,7 @@ const collaborationTypes = [
   {
     icon: GraduationCap,
     title: "Mentorship",
-    description: "Guiding students and early-career conservationists"
+    description: "Guiding students and interested conservationists"
   }
 ];
 
