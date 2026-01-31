@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Mail, Instagram, Youtube, Users, Mic, Pen, GraduationCap, MapPin } from "lucide-react";
+import { Linkedin, Mail, Instagram, Users, Mic, Pen, GraduationCap, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const collaborationTypes = [
@@ -44,12 +44,6 @@ const socialLinks = [
     name: "Instagram",
     description: "Creative & lifestyle updates",
     href: "https://www.instagram.com/simran__prasad/"
-  },
-  {
-    icon: Youtube,
-    name: "YouTube",
-    description: "Short videos & talks",
-    href: "https://www.youtube.com/shorts/VzKPbVYGNu8"
   }
 ];
 
