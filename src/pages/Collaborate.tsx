@@ -65,13 +65,59 @@ const Collaborate = () => {
     subject: "",
     message: ""
   });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!validateEmail(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    } else if (formData.subject.trim().length < 3) {
+      newErrors.subject = "Subject must be at least 3 characters";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const subject = encodeURIComponent(formData.subject || "Collaboration Inquiry");
+    if (!validateForm()) {
+      toast({
+        title: "Please fix the errors",
+        description: "Some fields need your attention.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    const subject = encodeURIComponent(formData.subject.trim());
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name.trim()}\nEmail: ${formData.email.trim()}\n\nMessage:\n${formData.message.trim()}`
     );
     
     window.location.href = `mailto:simranprasaduae@gmail.com?subject=${subject}&body=${body}`;
@@ -101,35 +147,55 @@ const Collaborate = () => {
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-6">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <Input
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="bg-card/50 border-border focus:border-primary"
-                  required
-                />
-                <Input
-                  type="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="bg-card/50 border-border focus:border-primary"
-                  required
-                />
-                <Input
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="bg-card/50 border-border focus:border-primary"
-                  required
-                />
-                <Textarea
-                  placeholder="Message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="bg-card/50 border-border focus:border-primary min-h-[150px]"
-                  required
-                />
+                <div>
+                  <Input
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={(e) => {
+                      setFormData({ ...formData, name: e.target.value });
+                      if (errors.name) setErrors({ ...errors, name: "" });
+                    }}
+                    className={`bg-card/50 border-border focus:border-primary ${errors.name ? "border-red-500" : ""}`}
+                  />
+                  {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                </div>
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={(e) => {
+                      setFormData({ ...formData, email: e.target.value });
+                      if (errors.email) setErrors({ ...errors, email: "" });
+                    }}
+                    className={`bg-card/50 border-border focus:border-primary ${errors.email ? "border-red-500" : ""}`}
+                  />
+                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                </div>
+                <div>
+                  <Input
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={(e) => {
+                      setFormData({ ...formData, subject: e.target.value });
+                      if (errors.subject) setErrors({ ...errors, subject: "" });
+                    }}
+                    className={`bg-card/50 border-border focus:border-primary ${errors.subject ? "border-red-500" : ""}`}
+                  />
+                  {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
+                </div>
+                <div>
+                  <Textarea
+                    placeholder="Message"
+                    value={formData.message}
+                    onChange={(e) => {
+                      setFormData({ ...formData, message: e.target.value });
+                      if (errors.message) setErrors({ ...errors, message: "" });
+                    }}
+                    className={`bg-card/50 border-border focus:border-primary min-h-[150px] ${errors.message ? "border-red-500" : ""}`}
+                  />
+                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                </div>
                 <div className="flex gap-4">
                   <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
                     Send Message
