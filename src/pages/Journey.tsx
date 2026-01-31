@@ -409,10 +409,8 @@ const Journey = () => {
 
               {/* Journey continues message */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                <p className="text-muted-foreground text-sm italic flex items-center gap-2">
-                  <Waves className="w-4 h-4" />
-                  The river flows on...
-                  <Waves className="w-4 h-4" />
+                <p className="text-muted-foreground text-sm italic">
+                  The journey continues...
                 </p>
               </div>
             </div>
