@@ -62,7 +62,7 @@ const BookClub = () => {
             <span className="text-primary">Book Club</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mb-4">
-            Curating stories that bridge science, nature, and human experience. Each book offers new perspectives on our relationship with the natural world.
+            A curated book review project celebrating stories across genres, from thrillers and historical fiction to literary fiction and romance. The Little Bookclub is a personal passion project built on diverse books, honest reviews, and a love of getting lost in reading.
           </p>
 
           {/* Instagram Link */}
