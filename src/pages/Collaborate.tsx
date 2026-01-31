@@ -72,6 +72,23 @@ const Collaborate = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
+                <h3 className="text-xl font-semibold text-foreground mb-6">Collaboration Opportunities</h3>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {collaborationTypes.map((type) => (
+                    <Card key={type.title} className="bg-card/30 border-border">
+                      <CardContent className="p-4 flex items-start gap-3">
+                        <type.icon className="w-5 h-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-medium text-foreground">{type.title}</p>
+                          <p className="text-xs text-muted-foreground">{type.description}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              <div>
                 <h3 className="text-xl font-semibold text-foreground mb-6">Get In Touch</h3>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {socialLinks.map((link) => (
@@ -88,23 +105,6 @@ const Collaborate = () => {
                         <p className="text-xs text-muted-foreground">{link.description}</p>
                       </div>
                     </a>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6">Collaboration Opportunities</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {collaborationTypes.map((type) => (
-                    <Card key={type.title} className="bg-card/30 border-border">
-                      <CardContent className="p-4 flex items-start gap-3">
-                        <type.icon className="w-5 h-5 text-primary mt-0.5" />
-                        <div>
-                          <p className="font-medium text-foreground">{type.title}</p>
-                          <p className="text-xs text-muted-foreground">{type.description}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
                   ))}
                 </div>
               </div>
